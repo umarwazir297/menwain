@@ -606,3 +606,62 @@ input::-webkit-inner-spin-button {
        /*counter end  */
 
 
+  /* **********************Dropdown menu******************************** */
+  
+  .dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 260px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.show {display: block;}
+
+.dropdown-menu-right {
+  right: 0px;
+  left: auto;
+}
+
+    /* **************************************Dropdown menu end****************** */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #ffffff; 
+      border-radius: 8px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #004040; 
+      border-radius: 8px; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #004040; 
+    }
+    .scroll-f{
+    float:left;
+    width:1000px;
+    overflow-y: auto;
+    height: 80vh;
+  
+  }
+  .txt-1{
+    font-size: 0.75em;
+  }
+  .txt-2{
+    font-size: 0.7em;
+  }
