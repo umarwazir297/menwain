@@ -366,6 +366,11 @@ font-size: 14px;
   box-shadow: none !important
   ;
 }
+.btn-confirm:focus,.btn-confirm:active {
+  outline: none !important;
+  box-shadow: none !important
+  ;
+}
 .pointer{
   cursor: pointer;
 }
@@ -480,3 +485,77 @@ font-size: 14px;
     font-size: 14px;
   }
  }
+ /* =================================custom radio========================== */
+ /* radio Button */
+.radio {
+  position: relative;
+}
+
+input[type="radio"] {
+  position: relative;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #004040;
+  border-radius: 50%;
+}
+
+.radio:hover input~.checkmark {
+  background-color: #FFFF;
+}
+
+.radio input:checked~.checkmark {
+  border: 2px solid;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio input:checked~.checkmark:after {
+  display: block;
+}
+
+.radio .checkmark:after {
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #004040;
+}
+
+.radio label {
+  color: #004040;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.border-circle {
+  border-color: #004040 !important;
+}
+
+.btn-save{
+  
+    background-color:#004040;
+    color: white;
+    border-color: #004040;
+    border-width:1px;
+    padding: 5px 30px;
+    font-size: 0.8em;
+    border-radius: 32px;
+    font-weight: 400;
+
+}

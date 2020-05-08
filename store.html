@@ -768,8 +768,8 @@
                                 </div>
                             </div>
                             <div class="store-div pointer mt-4">
-                                <div class="row " data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-                                    aria-controls="collapseThree">
+                                <div class="row " data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="true" aria-controls="collapseThree">
                                     <div class="col-md-3 bg-store  ">
                                         <p class="text-left ml-4 mt-3 text-white">Total: SAR150 </p>
 
@@ -1070,8 +1070,8 @@
                                 </div>
                             </div>
                             <div class="store-div pointer mt-4">
-                                <div class="row " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
-                                    aria-controls="collapseFour">
+                                <div class="row " data-toggle="collapse" data-target="#collapseFour"
+                                    aria-expanded="true" aria-controls="collapseFour">
                                     <div class="col-md-3 bg-store  ">
                                         <p class="text-left ml-4 mt-3 text-white">Total: SAR150 </p>
 
@@ -1463,6 +1463,206 @@
             </div>
         </div>
     </div>
+    <!-- ==============================radio modal============================= -->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content " style="border-radius: 25px;  overflow: hidden;">
+                <div id="method">
+                    <div class="modal-header bg-main">
+                        <h3 class="modal-title text-white ml-auto" id="exampleModalLongTitle1" style="font-size: 18px;">
+                            Select Method</h3>
+
+                        <button type="button" class="close text-white" style="opacity: 1;" data-dismiss="modal"
+                            aria-label="Close ">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <button id="now" class="btn default4 custom-width" style="border-radius: 0px !important;"
+                                onclick="radioOne()">Pay Now</button>
+                            <button id="later" class="btn default4 custom-width bg-store"
+                                style="border-radius: 0px !important; background-color: #7f9f9f !important;"
+                                onclick="radioTwo()">Pay Later</button>
+                        </div>
+                        <div id="firstradio">
+                            <div class="row mt-4">
+                                <div class="col-8">
+                                    <form>
+                                        <div class="wrapper">
+                                            <div class="wrapper-inner">
+                                                <div class="form-group">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input class="ml-3" type="radio" name="radio-input"
+                                                                checked="checked"> <span
+                                                                class="color-main text-capitalize">Deliver to
+                                                                Address</span>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input class="ml-4" type="radio" name="radio-input"><span
+                                                                class="color-main text-capitalize">Prepare and pickup
+                                                                from
+                                                                store</span>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <button class="btn default3 mt-4 text-white" onclick="hideElementmethod()">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="secondradio" style="display: none;">
+                            <div class="row mt-4">
+                                <div class="col-8">
+                                    <form>
+                                        <div class="wrapper">
+                                            <div class="wrapper-inner">
+                                                <div class="form-group">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input class="ml-3" type="radio" name="radio-input"
+                                                                checked="checked"> <span
+                                                                class="text-capitalize color-main">Pay
+                                                                online, pick from store</span>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input class="ml-4" type="radio" name="radio-input"><span
+                                                                class="text-capitalize color-main">Traditional
+                                                                Purchase</span>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input class="ml-4" type="radio" name="radio-input"><span
+                                                                class="text-capitalize color-main">Cash on
+                                                                delivery</span>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <button class="btn default3 mt-4 text-white" onclick="hideElementmethod()">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="delivery" style="display: none;">
+                    <div class="modal-header bg-main">
+                        <h3 class="modal-title text-white ml-auto" id="exampleModalLongTitle1" style="font-size: 18px;">
+                            Delivery Time</h3>
+
+                        <button type="button" class="close text-white" style="opacity: 1;" data-dismiss="modal"
+                            aria-label="Close ">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <h6 class=" color-main mini-text mb-2 mt-4 ml-md-2"> Date</h6>
+                                        <input class="inputData mt-3 mt-md-1" type="text" placeholder="25-07-2020" />
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center mt-4">
+                                    <div class="col-12">
+                                        <h6 class=" color-main mini-text ml-md-2"> Time</h6>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="inputData mt-3 mt-md-1" type="text" placeholder="10:00-01:20" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="inputData mt-3 mt-md-1" type="text" placeholder="10:00-01:20" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="inputData mt-3 mt-md-1" type="text" placeholder="10:00-01:20" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <button class="btn default3 mt-2 mb-2 text-white" onclick="hideElementdeliver()">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="list" style="display: none;">
+                    <div class="modal-header bg-main">
+                        <h3 class="modal-title text-white ml-auto text-capitalize" id="exampleModalLongTitle1"
+                            style="font-size: 18px;">
+                            Add to List</h3>
+
+                        <button type="button" class="close text-white" style="opacity: 1;" data-dismiss="modal"
+                            aria-label="Close ">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <h6 class=" color-main  mini-text mb-3 mt-4 ml-md-2 text-capitalize"> Name your
+                                            list
+                                        </h6>
+                                        <input class="inputData mt-3 mt-md-1" type="text" placeholder="Enter Name" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <button class="btn btn-save mt-4 mb-2 text-white">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <script>
         function hideNavail() {
             document.getElementById('1stmodal').style.display = 'block';
@@ -1489,6 +1689,30 @@
             document.getElementById('register').style.display = 'block';
             document.getElementById("logdul").style.backgroundColor = '#7f9f9f';
             document.getElementById("regdul").style.backgroundColor = '#004040';
+        }
+        function radioOne() {
+            document.getElementById('firstradio').style.display = 'block';
+            document.getElementById('secondradio').style.display = 'none';
+            document.getElementById("now").style.backgroundColor = '#004040';
+            document.getElementById("later").style.backgroundColor = '#7f9f9f';
+
+        }
+        function radioTwo() {
+            document.getElementById('firstradio').style.display = 'none';
+            document.getElementById('secondradio').style.display = 'block';
+            document.getElementById("now").style.backgroundColor = '#7f9f9f';
+            document.getElementById("later").style.backgroundColor = '#004040';
+        }
+        function hideElementmethod() {
+            document.getElementById('method').style.display = 'none';
+            document.getElementById('delivery').style.display = 'block';
+            document.getElementById('list').style.display = 'none';
+
+        }
+        function hideElementdeliver() {
+            document.getElementById('method').style.display = 'none';
+            document.getElementById('delivery').style.display = 'none';
+            document.getElementById('list').style.display = 'block';
         }
     </script>
     <!--==========================footer=============================== -->
