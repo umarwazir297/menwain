@@ -665,3 +665,6 @@ input::-webkit-inner-spin-button {
   .txt-2{
     font-size: 0.7em;
   }
+  .bg-col{
+    background-color: #d7dce0;
+  }
