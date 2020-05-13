@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <title>All order</title>
+</head>
+
+<body>
+
+  <section class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a class="text-white" href="#">My shopping list </a> &nbsp;|&nbsp;
+          <span> عربی</span> &nbsp;|&nbsp; <a class="text-white" href="#"> Seller</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======================Header sectio============================== -->
+  <section class="mt-3 mb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          <div class="left-center">
+            <a href="index.html" class="text-decoration-none"> <img src="images/logo.png" class="img-fluid"
+                width="50"></a>
+          </div>
+        </div>
+        <div class="col-md-5 mt-2">
+          <form class="search-shop" action="#">
+            <input type="text" id="my-text" placeholder="What are you looking for ?" name="search2"
+              style="color: white;">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="col-md-2 offset-md-1 mt-3">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="text-center">
+                <img src="images/van.png" class="img-fluid ">
+              </div>
+            </div>
+            <div class="col-md-7 p-0">
+              <div class="left-center">
+                <p class="delivery-text">Deliver to Riyadh <br><span><a href="#">change area</a></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-3">
+          <div class="row pointer" data-toggle="modal" data-target="#exampleModalCenter1">
+            <div class="col-md-4">
+              <div class="text-center">
+                <img src="images/profile.png" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-md-8 p-0 m-auto ">
+              <div class="left-center">
+                <p class="delivery-text mt-2">Login or Register</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 mt-3">
+          <div class="text-center">
+            <img onclick="myFunction()" class="mt-1 dropbtn pointer " src="images/Group 1.png">
+          </div>
+          <!----------------------------notification dropdown-------------------->
+          <div id="myDropdown" class="dropdown-content dropdown-menu-right bg-white ">
+            <div class="container">
+              <div id="1stmodal">
+                <div style="height:60vh; width:100%;" class="scroll-f mt-3 mb-3">
+                  <div class="container-fluid">
+                    <div class="row ">
+                      <div class="col-12">
+                        <div class="text-right">
+                          <img src="images/Group 33.png" width="17">
+                        </div>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <img src="images/order dropdown.png" class="img-fluid">
+                      </div>
+                      <div class="col-8 pl-0 mt-2">
+                        <h6 class="text-capitalize color-main txt-1">1x boneless mutton 1 kg </h6>
+                        <h6 class="color-main txt-2">By: MealOne</h6>
+                        <h4 class="text-capitalize font-weight-bold color-main mini-text mt-2 txt-1">SAR 50 <span
+                            class="color-main text-small ml-2">In stock</span><span class="float-right"> <img
+                              src="images/Group 32.png" width="40">
+                          </span></h4>
+                      </div>
+                    </div>
+                    <hr style="border-bottom: 2px solid #004040;">
+                    <div class="row ">
+                      <div class="col-12">
+                        <div class="text-right">
+                          <img src="images/Group 33.png" width="17">
+                        </div>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <img src="images/order dropdown.png" class="img-fluid">
+                      </div>
+                      <div class="col-8 pl-0 mt-2">
+                        <h6 class="text-capitalize color-main txt-1">1x boneless mutton 1 kg </h6>
+                        <h6 class="color-main txt-2">By: MealOne</h6>
+                        <h4 class="text-capitalize font-weight-bold color-main mini-text mt-2 txt-1">SAR 50 <span
+                            class="color-main text-small ml-2">In stock</span><span class="float-right"> <img
+                              src="images/Group 32.png" width="40">
+                          </span></h4>
+                      </div>
+                    </div>
+                    <hr style="border-bottom: 2px solid #004040;">
+                    <div class="row ">
+                      <div class="col-12">
+                        <div class="text-right">
+                          <img src="images/Group 33.png" width="17">
+                        </div>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <img src="images/order dropdown.png" class="img-fluid">
+                      </div>
+                      <div class="col-8 pl-0 mt-2">
+                        <h6 class="text-capitalize color-main txt-1">1x boneless mutton 1 kg </h6>
+                        <h6 class="color-main txt-2">By: MealOne</h6>
+                        <h4 class="text-capitalize font-weight-bold color-main mini-text mt-2 txt-1">SAR 50 <span
+                            class="color-main text-small ml-2">In stock</span><span class="float-right"> <img
+                              src="images/Group 32.png" width="40">
+                          </span></h4>
+                      </div>
+                    </div>
+                    <hr style="border-bottom: 2px solid #004040;">
+                    <div class="row ">
+                      <div class="col-12">
+                        <div class="text-right">
+                          <img src="images/Group 33.png" width="17">
+                        </div>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <img src="images/order dropdown.png" class="img-fluid">
+                      </div>
+                      <div class="col-8 pl-0 mt-2">
+                        <h6 class="text-capitalize color-main txt-1">1x boneless mutton 1 kg </h6>
+                        <h6 class="color-main txt-2">By: MealOne</h6>
+                        <h4 class="text-capitalize font-weight-bold color-main mini-text mt-2 txt-1">SAR 50 <span
+                            class="color-main text-small ml-2">In stock</span><span class="float-right"> <img
+                              src="images/Group 32.png" width="40">
+                          </span></h4>
+                      </div>
+                    </div>
+                    <hr style="border-bottom: 2px solid #004040;">
+                    <div class="row ">
+                      <div class="col-12">
+                        <div class="text-right">
+                          <img src="images/Group 33.png" width="17">
+                        </div>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <img src="images/order dropdown.png" class="img-fluid">
+                      </div>
+                      <div class="col-8 pl-0 mt-2">
+                        <h6 class="text-capitalize color-main txt-1">1x boneless mutton 1 kg </h6>
+                        <h6 class="color-main txt-2">By: MealOne</h6>
+                        <h4 class="text-capitalize font-weight-bold color-main mini-text mt-2 txt-1">SAR 50 <span
+                            class="color-main text-small ml-2">In stock</span><span class="float-right"> <img
+                              src="images/Group 32.png" width="40">
+                          </span></h4>
+                      </div>
+                    </div>
+                    <hr style="border-bottom: 2px solid #004040;">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="text-center">
+                          <a href="checkout.html"> <button class="btn default3 text-white">Checkout</button></a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------------------------------------------------------navbar---------------------------------------------------->
+  <section>
+    <nav class="navbar navbar-expand-sm navbar-custom p-1">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+          <i class="fa fa-bars fa-lg py-1 text-white"></i>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarCustom">
+
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">All Categories </a>
+            </li>
+            <li class="nav-item "></li>
+            <a class="nav-link" href="#">Online Deals<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Food and Baverages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Health and Beauty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Baby Center</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pet & Animal Center</a>
+            </li>
+          </ul>
+          <a class="nav-link ml-auto color-1 " href="#" data-toggle="modal" data-target="#signinModal"
+            data-whatever="@mdo">
+            <img src="images/expressdelivery.png"> <span style="text-decoration: none; ">ExpressDelivery</span>
+          </a>
+        </div>
+      </div>
+
+    </nav>
+  </section>
+  <!-- =============================main======================================= -->
+  <section class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 bg-order" style="margin-top: 2.95rem;">
+          <div class="row ">
+            <div class="col-12">
+              <h6 class="pt-3 text-capitalize mini-text2">Manage my Account</h6>
+            </div>
+          </div>
+          <div class="row border-row">
+            <div class="col-12">
+              <a href="profile.html" class="text-decoration-none"><h6 class="pt-3 mute-text font-weight-normal text-capitalize pointer">Profile</h6></a>
+            </div>
+          </div>
+          <div class="row border-row2">
+            <div class="col-12">
+              <a href="All_order.html" class="text-decoration-none"> <h6 class="pt-3 color-main font-weight-bold text-capitalize">My orders</h6></a>
+            </div>
+          </div>
+          <div class="row border-row">
+            <div class="col-12">
+              <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Terms and Condition</h6>
+            </div>
+          </div>
+          <div class="row border-row">
+            <div class="col-12">
+              <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Privacy Policy</h6>
+            </div>
+          </div>
+          <div class="row border-row">
+            <div class="col-12">
+              <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Settings</h6>
+            </div>
+          </div>
+          <div class="row border-row">
+            <div class="col-12">
+              <h6 class="pt-4 mute-text font-weight-normal text-capitalize">About</h6>
+            </div>
+          </div>
+          <div class="row border-row">
+            <div class="col-12">
+              <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Rate Application</h6>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-9 mt-md-0 mt-5">
+          <div class="row">
+            <div class="col-md-12">
+              <h6 class="pt-3 pb-1 text-capitalize mini-text2">my Orders</h6>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-3 bg-main p-1 pointer" id="first" onclick="hideElementall()">
+              <div class="text-center">
+                <span class="text-white ">All<span>
+              </div>
+            </div>
+            <div class="col-md-3 bg-tab p-1 pointer" id="second" onclick="hideElementprocess()">
+              <div class="text-center">
+                <span class="text-white ">Processing<span>
+              </div>
+            </div>
+            <div class="col-md-3 bg-tab p-1 pointer" id="third" onclick="hideElementdeliver()">
+              <div class="text-center">
+                <span class="text-white ">Delivered<span>
+              </div>
+            </div>
+            <div class="col-md-3 bg-tab p-1 pointer" id="fourth" onclick="hideElementcancell()">
+              <div class="text-center">
+                <span class="text-white ">Cancelled<span>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5" id="all">
+            <div class="row bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Pending</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Pending</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Pending</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Pending</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Pending</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5" id="processing" style="display: none;">
+            <div class="row bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">POrder Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Processing</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Processing</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Processing</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Processing</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Processing</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5" id="deliver" style="display: none;">
+            <div class="row bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">QOrder Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Deliverd</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                  <br>
+                  <button class="btn default3 mt-2 mr-2 text-white">Reorder</button>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Deliverd</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                  <br>
+                  <button class="btn default3 mt-2 mr-2 text-white">Reorder</button>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Deliverd</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                  <br>
+                  <button class="btn default3 mt-2 mr-2 text-white">Reorder</button>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Deliverd</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                  <br>
+                  <button class="btn default3 mt-2 mr-2 text-white">Reorder</button>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Deliverd</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                  <br>
+                  <button class="btn default3 mt-2 mr-2 text-white">Reorder</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5" id="cancelled" style="display: none;">
+            <div class="row bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">ROrder Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Cancelled</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Cancelled</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Cancelled</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Cancelled</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 bg-order shadow-sm p-2">
+              <div class="col-md-6 col-8">
+                <h6 class="mani-text mt-2">Order Number: <span class="text-muted ml-1">2541256</span></h6>
+                <h6 class="mani-text mt-2">Status: <span class="text-muted ml-1">Cancelled</span></h6>
+                <h6 class="mani-text mt-2">Date: <span class="text-muted ml-1">20 oct 2019</span></h6>
+                <h6 class="txt-2 mt-2">Total: <span class="text-muted ml-1">25 SAR</span></h6>
+              </div>
+              <div class="col-4 col-md-6">
+                <div class="text-right">
+                  <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Sign in modal-->
+  <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content " style="border-radius: 25px;">
+      <div class="modal-header bg-main" style="border-radius: 25px 25px 0px 0px;">
+        <h3 class="modal-title text-white ml-auto" id="exampleModalLongTitle" style="font-size: 18px;">My Account</h3>
+        <button type="button" class="close text-white" style="opacity: 1;" data-dismiss="modal" aria-label="Close ">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <button id="logdul" class="btn default4 custom-width" style="border-radius: 0px !important;"
+            onclick="login()">Login</button>
+          <button id="regdul" class="btn default4 custom-width bg-store"
+            style="border-radius: 0px !important; background-color: #7f9f9f !important;"
+            onclick="register()">Register</button>
+        </div>
+        <div>
+          <div id="login">
+            <form class="mt-5" >
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <input class="inputData mt-3" type="email" placeholder="@email.com" />
+                  <input class="inputData" type="password" placeholder="password" />
+                  <div class="text-center">
+                   <a href="profile.html" class="btn btn-checkout mt-5 mb-4">Login</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="register" style="display: none;">
+            <form>
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+
+                  <h6 class=" color-main mini-text2 mb-2 mt-4"> Personal Information</h6>
+                  <input class="inputData mt-3" type="text" placeholder="First name" />
+                  <input class="inputData" type="text" placeholder="Last name" />
+                  <input class="inputData" type="text" placeholder="Phone" />
+                  <input class="inputData" type="email" placeholder="Email Address" />
+                  <h6 class="color-main mini-text2 mb-2"> Sex</h6>
+                  <div class="row justify-content-center mb-3">
+                    <div class="col-4">
+                        <div class="wrapper">
+                            <div class="wrapper-inner">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="ml-3" type="radio" name="radio-input"
+                                                checked="checked"> <span
+                                                class="color-main text-capitalize mini-text">Male</span>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="wrapper">
+                            <div class="wrapper-inner">     
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="ml-4" type="radio" name="radio-input" style="display: inline-block;"><span
+                                                class="color-main text-capitalize mini-text">Female</span>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <input class="inputData" type="password" placeholder="Password" />
+                  <input class="inputData" type="password" placeholder="Comfirm password" />
+                  <input class="inputData" type="text" placeholder="Shipping address" />
+                  <h6 class="mb-3 mt-4 color-main mini-text2"> Payment Information</h6>
+                  <input class="inputData" type="text" placeholder="Card holder name" />
+                  <input class="inputData" type="number" placeholder="Card number" />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input class="inputData" type="text" placeholder="Expiry date " />
+                    </div>
+                    <div class="col-md-6">
+                      <input class="inputData" type="text" placeholder="Cvv no" />
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <a href="profile.html" class="btn btn-checkout mt-4 mb-3">Register</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <script>
+    function login() {
+      document.getElementById('login').style.display = 'block';
+      document.getElementById('register').style.display = 'none';
+      document.getElementById("regdul").style.backgroundColor = '#7f9f9f';
+      document.getElementById("logdul").style.backgroundColor = '#004040';
+
+    }
+    function register() {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('register').style.display = 'block';
+      document.getElementById("logdul").style.backgroundColor = '#7f9f9f';
+      document.getElementById("regdul").style.backgroundColor = '#004040';
+    }
+    function hideElementall() {
+      document.getElementById('all').style.display = 'block';
+      document.getElementById('processing').style.display = 'none';
+      document.getElementById('deliver').style.display = 'none';
+      document.getElementById('cancelled').style.display = 'none';
+      document.getElementById("first").style.backgroundColor = '#004040';
+      document.getElementById("second").style.backgroundColor = '#008287';
+      document.getElementById("third").style.backgroundColor = '#008287';
+      document.getElementById("fourth").style.backgroundColor = '#008287';
+    }
+    function hideElementprocess() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('processing').style.display = 'block';
+      document.getElementById('deliver').style.display = 'none';
+      document.getElementById('cancelled').style.display = 'none';
+
+      document.getElementById("first").style.backgroundColor = '#008287';
+      document.getElementById("second").style.backgroundColor = '#004040';
+      document.getElementById("third").style.backgroundColor = '#008287';
+      document.getElementById("fourth").style.backgroundColor = '#008287';
+    }
+    function hideElementdeliver() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('processing').style.display = 'none';
+      document.getElementById('deliver').style.display = 'block';
+      document.getElementById('cancelled').style.display = 'none';
+
+      document.getElementById("first").style.backgroundColor = '#008287';
+      document.getElementById("second").style.backgroundColor = '#008287';
+      document.getElementById("third").style.backgroundColor = '#004040';
+      document.getElementById("fourth").style.backgroundColor = '#008287';
+    }
+    function hideElementcancell() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('processing').style.display = 'none';
+      document.getElementById('deliver').style.display = 'none';
+      document.getElementById('cancelled').style.display = 'block';
+      document.getElementById("first").style.backgroundColor = '#008287';
+      document.getElementById("second").style.backgroundColor = '#008287';
+      document.getElementById("third").style.backgroundColor = '#008287';
+      document.getElementById("fourth").style.backgroundColor = '#004040';
+    }
+  </script>
+  <!-----------------------drop down script--------------------------->
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    document.getElementById("myDropdown").addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  </script>
+  <!--==========================footer=============================== -->
+  <footer class="mt-5 bg-main">
+    <div class="container">
+      <div class="row pt-5 pb-3 ">
+        <div class="col-md-2">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-white card-text">About Us</h5>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Terms of use</h6>
+              </a>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Privacy Policy</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-4 mt-md-0">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-white card-text">Customer Services</h5>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Contact Us</h6>
+              </a>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Warranty Policy</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-4 mt-md-0">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-white card-text">Social</h5>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Facebook</h6>
+              </a>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Instagram</h6>
+              </a>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-12">
+              <a href="#" class="text-decoration-none">
+                <h6 class="text-white font-weight-normal">Twitter</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="right-left">
+            <a href="#" class="text-decoration-none"> <img src="images/Zcc copy.png" class="img-fluid" width="60"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="border-bottom: 2px solid white;">
+    <div class="container pb-3 pt-2">
+      <div class="row">
+        <div class="col-md-6">
+          <h6 class="text-white font-weight-normal">All rights reserved @oranjeclick.com</h6>
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="right-left">
+            <span class="text-white manf-text">Payment methods</span>
+            <img src="images/visa.png" class="img-fluid ml-3">
+            <img src="images/mastercard.png" class="img-fluid ml-3">
+            <img src="images/paypal.png" class="img-fluid ml-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

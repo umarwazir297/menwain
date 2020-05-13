@@ -367,111 +367,109 @@
 <br>
 <br>
 <!--Sign in modal-->
-<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
-aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content " style="border-radius: 25px;">
-        <div class="modal-header bg-main" style="border-radius: 25px 25px 0px 0px;">
-            <h3 class="modal-title text-white ml-auto" id="exampleModalLongTitle" style="font-size: 18px;">My
-                Account</h3>
-            <button type="button" class="close text-white" style="opacity: 1;" data-dismiss="modal"
-                aria-label="Close ">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <button id="logdul" class="btn default4 custom-width" style="border-radius: 0px !important;"
-                    onclick="login()">Login</button>
-                <button id="regdul" class="btn default4 custom-width bg-store"
-                    style="border-radius: 0px !important; background-color: #7f9f9f !important;"
-                    onclick="register()">Register</button>
-            </div>
-            <div>
-                <div id="login">
-                    <form class="mt-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <input class="inputData mt-3" type="email" placeholder="@email.com" />
-                                <input class="inputData" type="password" placeholder="password" />
-                                <div class="text-center">
-                                    <button class="btn btn-checkout mt-5 mb-4">Login</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div id="register" style="display: none;">
-                    <form>
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-
-                                <h6 class=" color-main mini-text2 mb-2 mt-4"> Personal Information</h6>
-                                <input class="inputData mt-3" type="text" placeholder="First name" />
-                                <input class="inputData" type="text" placeholder="Last name" />
-                                <input class="inputData" type="text" placeholder="Phone" />
-                                <input class="inputData" type="email" placeholder="Email Address" />
-                                <h6 class="color-main mini-text2 mb-2"> Sex</h6>
-                                <div class="row justify-content-center mb-3">
-                                    <div class="col-4">
-                                        <div class="wrapper">
-                                            <div class="wrapper-inner">
-                                                <div class="form-group">
-                                                    <div class="radio">
-                                                        <label>
-                                                            <input class="ml-3" type="radio" name="radio-input"
-                                                                checked="checked"> <span
-                                                                class="color-main text-capitalize mini-text">Male</span>
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="wrapper">
-                                            <div class="wrapper-inner">     
-                                                <div class="form-group">
-                                                    <div class="radio">
-                                                        <label>
-                                                            <input class="ml-4" type="radio" name="radio-input" style="display: inline-block;"><span
-                                                                class="color-main text-capitalize mini-text">Female</span>
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input class="inputData" type="password" placeholder="Password" />
-                                <input class="inputData" type="password" placeholder="Comfirm password" />
-                                <input class="inputData" type="text" placeholder="Shipping address" />
-                                <h6 class="mb-3 mt-4 color-main mini-text2"> Payment Information</h6>
-                                <input class="inputData" type="text" placeholder="Card holder name" />
-                                <input class="inputData" type="number" placeholder="Card number" />
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input class="inputData" type="text" placeholder="Expiry date " />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input class="inputData" type="text" placeholder="Cvv no" />
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <button class="btn btn-checkout mt-4 mb-3">Register</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
+  <div class="modal-content " style="border-radius: 25px;">
+    <div class="modal-header bg-main" style="border-radius: 25px 25px 0px 0px;">
+      <h3 class="modal-title text-white ml-auto" id="exampleModalLongTitle" style="font-size: 18px;">My Account</h3>
+      <button type="button" class="close text-white" style="opacity: 1;" data-dismiss="modal" aria-label="Close ">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
+    <div class="modal-body">
+      <div class="row">
+        <button id="logdul" class="btn default4 custom-width" style="border-radius: 0px !important;"
+          onclick="login()">Login</button>
+        <button id="regdul" class="btn default4 custom-width bg-store"
+          style="border-radius: 0px !important; background-color: #7f9f9f !important;"
+          onclick="register()">Register</button>
+      </div>
+      <div>
+        <div id="login">
+          <form class="mt-5" >
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <input class="inputData mt-3" type="email" placeholder="@email.com" />
+                <input class="inputData" type="password" placeholder="password" />
+                <div class="text-center">
+                 <a href="profile.html" class="btn btn-checkout mt-5 mb-4">Login</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="register" style="display: none;">
+          <form>
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+
+                <h6 class=" color-main mini-text2 mb-2 mt-4"> Personal Information</h6>
+                <input class="inputData mt-3" type="text" placeholder="First name" />
+                <input class="inputData" type="text" placeholder="Last name" />
+                <input class="inputData" type="text" placeholder="Phone" />
+                <input class="inputData" type="email" placeholder="Email Address" />
+                <h6 class="color-main mini-text2 mb-2"> Sex</h6>
+                <div class="row justify-content-center mb-3">
+                  <div class="col-4">
+                      <div class="wrapper">
+                          <div class="wrapper-inner">
+                              <div class="form-group">
+                                  <div class="radio">
+                                      <label>
+                                          <input class="ml-3" type="radio" name="radio-input"
+                                              checked="checked"> <span
+                                              class="color-main text-capitalize mini-text">Male</span>
+                                          <span class="checkmark"></span>
+                                      </label>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="wrapper">
+                          <div class="wrapper-inner">     
+                              <div class="form-group">
+                                  <div class="radio">
+                                      <label>
+                                          <input class="ml-4" type="radio" name="radio-input" style="display: inline-block;"><span
+                                              class="color-main text-capitalize mini-text">Female</span>
+                                          <span class="checkmark"></span>
+                                      </label>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <input class="inputData" type="password" placeholder="Password" />
+                <input class="inputData" type="password" placeholder="Comfirm password" />
+                <input class="inputData" type="text" placeholder="Shipping address" />
+                <h6 class="mb-3 mt-4 color-main mini-text2"> Payment Information</h6>
+                <input class="inputData" type="text" placeholder="Card holder name" />
+                <input class="inputData" type="number" placeholder="Card number" />
+                <div class="row">
+                  <div class="col-md-6">
+                    <input class="inputData" type="text" placeholder="Expiry date " />
+                  </div>
+                  <div class="col-md-6">
+                    <input class="inputData" type="text" placeholder="Cvv no" />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <a href="profile.html" class="btn btn-checkout mt-4 mb-3">Register</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 </div>
 <script>
