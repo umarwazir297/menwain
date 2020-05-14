@@ -10,9 +10,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-    <title>All order</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -252,174 +250,140 @@
     <!-- =============================main======================================= -->
     <section class="mt-5">
         <div class="container">
-            <div class="row bg-order shadow-sm p-2">
-                <div class="col-md-12">
-                    <h6 class="text-uppercase text-center mt-1">List Name<span class="float-right"><a href=""><img
-                                    src="images/edit.png"></a> <a href="#" class="ml-3"><img src="images/share.png"></a>
-                        </span></h6>
+            <div class="row">
+                <div class="col-md-3 bg-order" style="margin-top: 2.95rem;">
+                    <div class="row ">
+                        <div class="col-12">
+                            <h6 class="pt-3 text-capitalize mini-text2">Manage my Account</h6>
+                        </div>
+                    </div>
+                    <div class="row border-row2">
+                        <div class="col-12">
+                            <a href="profile.html" class="text-decoration-none">
+                                <h6 class="pt-3 mute-text font-weight-normal text-capitalize pointer">Profile</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row border-row">
+                        <div class="col-12">
+                            <a href="All_order.html" class="text-decoration-none">
+                                <h6 class="pt-3 mute-text font-weight-normal text-capitalize">My orders</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row border-row2">
+                        <div class="col-12">
+                            <a href="terms.html" class="text-decoration-none">
+                                <h6 class="pt-4 color-main font-weight-bold text-capitalize">Terms and Condition</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row border-row">
+                        <div class="col-12">
+                            <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Privacy Policy</h6>
+                        </div>
+                    </div>
+                    <div class="row border-row">
+                        <div class="col-12">
+                            <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Settings</h6>
+                        </div>
+                    </div>
+                    <div class="row border-row">
+                        <div class="col-12">
+                            <h6 class="pt-4 mute-text font-weight-normal text-capitalize">About</h6>
+                        </div>
+                    </div>
+                    <div class="row border-row">
+                        <div class="col-12">
+                            <h6 class="pt-4 mute-text font-weight-normal text-capitalize">Rate Application</h6>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-9">
-                    <div class="row bg-order shadow-sm p-2">
-                        <div class="col-4 col-md-2">
-                            <div class="text-left">
-                                <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
+                <div class="col-md-9 mt-md-0 mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6 class="pt-3 pb-1 text-capitalize mini-text2">Terms And Condition</h6>
                             </div>
                         </div>
-                        <div class="col-md-6 col-6">
-                            <h6 class="mani-text mt-2">Order (800ml) </h6>
-                            <h6 class="mani-text text-muted mt-2">Store</h6>
-                            <h6 class="mani-text mt-2 text-muted">Total SAR 150</h6>
-                            <div class="qty2 mt-3">
-                                <span class="minus bg-dark">-</span>
-                                <input type="number" class="count" name="qty" value="1" style="border: 0; width: 2%;">
-                                <span class="plus bg-dark">+</span>
-                            </div>
-                            <script>
-                                $(document).ready(function () {
-                                    $('.count').prop('disabled', true);
-                                    $(document).on('click', '.plus', function () {
-                                        $('.count').val(parseInt($('.count').val()) + 1);
-                                    });
-                                    $(document).on('click', '.minus', function () {
-                                        $('.count').val(parseInt($('.count').val()) - 1);
-                                        if ($('.count').val() == 0) {
-                                            $('.count').val(1);
-                                        }
-                                    });
-                                });
-                            </script>
-                        </div>
-                        <div class="col-2 col-md-4">
-                            <div class="text-right mt-5">
-                                <a href="#"><img src="images/add cart.png" class="img-fluid mt-3" width="40"></a>
-                            </div>
-                        </div>
-
                     </div>
-                    <div class="row bg-order shadow-sm p-2 mt-5">
-                        <div class="col-4 col-md-2">
-                            <div class="text-left">
-                                <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-6">
-                            <h6 class="mani-text mt-2">Order (800ml) </h6>
-                            <h6 class="mani-text text-muted mt-2">Store</h6>
-                            <h6 class="mani-text mt-2 text-muted">Total SAR 150</h6>
-                            <div class="qty2 mt-3">
-                                <span class="minus bg-dark">-</span>
-                                <input type="number" class="count" name="qty" value="1" style="border: 0; width: 2%;">
-                                <span class="plus bg-dark">+</span>
-                            </div>
-                            <script>
-                                $(document).ready(function () {
-                                    $('.count').prop('disabled', true);
-                                    $(document).on('click', '.plus', function () {
-                                        $('.count').val(parseInt($('.count').val()) + 1);
-                                    });
-                                    $(document).on('click', '.minus', function () {
-                                        $('.count').val(parseInt($('.count').val()) - 1);
-                                        if ($('.count').val() == 0) {
-                                            $('.count').val(1);
-                                        }
-                                    });
-                                });
-                            </script>
-                        </div>
-                        <div class="col-2 col-md-4">
-                            <div class="text-right mt-5">
-                                <a href="#"><img src="images/add cart.png" class="img-fluid mt-3" width="40"></a>
-                            </div>
-                        </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="manf-text text-muted mt-5 pb-3">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit.
+                                    Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum?</p>
 
-                    </div>
-                    <div class="row bg-order shadow-sm p-2 mt-5">
-                        <div class="col-4 col-md-2">
-                            <div class="text-left">
-                                <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-6">
-                            <h6 class="mani-text mt-2">Order (800ml) </h6>
-                            <h6 class="mani-text text-muted mt-2">Store</h6>
-                            <h6 class="mani-text mt-2 text-muted">Total SAR 150</h6>
-                            <div class="qty2 mt-3">
-                                <span class="minus bg-dark">-</span>
-                                <input type="number" class="count" name="qty" value="1" style="border: 0; width: 2%;">
-                                <span class="plus bg-dark">+</span>
-                            </div>
-                            <script>
-                                $(document).ready(function () {
-                                    $('.count').prop('disabled', true);
-                                    $(document).on('click', '.plus', function () {
-                                        $('.count').val(parseInt($('.count').val()) + 1);
-                                    });
-                                    $(document).on('click', '.minus', function () {
-                                        $('.count').val(parseInt($('.count').val()) - 1);
-                                        if ($('.count').val() == 0) {
-                                            $('.count').val(1);
-                                        }
-                                    });
-                                });
-                            </script>
-                        </div>
-                        <div class="col-2 col-md-4">
-                            <div class="text-right mt-5">
-                                <a href="#"><img src="images/add cart.png" class="img-fluid mt-3" width="40"></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row bg-order shadow-sm p-2 mt-5">
-                        <div class="col-4 col-md-2">
-                            <div class="text-left">
-                                <img src="images/Group 58.png" class="img-fluid mt-1" width="100">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-6">
-                            <h6 class="mani-text mt-2">Order (800ml) </h6>
-                            <h6 class="mani-text text-muted mt-2">Store</h6>
-                            <h6 class="mani-text mt-2 text-muted">Total SAR 150</h6>
-                            <div class="qty2 mt-3">
-                                <span class="minus bg-dark">-</span>
-                                <input type="number" class="count" name="qty" value="1" style="border: 0; width: 2%;">
-                                <span class="plus bg-dark">+</span>
-                            </div>
-                            <script>
-                                $(document).ready(function () {
-                                    $('.count').prop('disabled', true);
-                                    $(document).on('click', '.plus', function () {
-                                        $('.count').val(parseInt($('.count').val()) + 1);
-                                    });
-                                    $(document).on('click', '.minus', function () {
-                                        $('.count').val(parseInt($('.count').val()) - 1);
-                                        if ($('.count').val() == 0) {
-                                            $('.count').val(1);
-                                        }
-                                    });
-                                });
-                            </script>
-                        </div>
-                        <div class="col-2 col-md-4">
-                            <div class="text-right mt-5">
-                                <a href="#"><img src="images/add cart.png" class="img-fluid mt-3" width="40"></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col-md-12">
-                            <div class="text-right">
-                                <button class="btn btn-checkout">Add more</button>
-                                <button class="btn btn-checkout ml-2"> &nbsp; Confirm</button>
-
+                                <hr style="border: 1px solid #004040;">
+                                <p class="manf-text text-muted mt-3 pb-3">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit.
+                                    Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum?
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum?</p>
+                                <hr style="border: 1px solid #004040;">
+                                <p class="manf-text text-muted mt-3 pb-3">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit.
+                                    Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum?
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum? Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum?
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Facilis corrupti voluptas sapiente, quas eum natus excepturi mollitia voluptates
+                                    consequatur
+                                    dolores illum repellat similique a nobis et atque dolorem fugit id?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus sed
+                                    magnam exercitationem
+                                    molestiae distinctio obcaecati itaque accusamus cupiditate sequi aperiam fugit
+                                    pariatur. Qui inventore,
+                                    explicabo harum aut voluptatibus eum?</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <!--Sign in modal-->
     <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
@@ -544,6 +508,17 @@
             document.getElementById("logdul").style.backgroundColor = '#7f9f9f';
             document.getElementById("regdul").style.backgroundColor = '#004040';
         }
+        function hideElementdisable() {
+            document.getElementById('disable').style.display = 'none';
+            document.getElementById('update').style.display = 'block';
+
+        }
+        function hideElementchange() {
+            document.getElementById('old').style.display = 'none';
+            document.getElementById('new').style.display = 'flex';
+
+        }
+
     </script>
     <!-----------------------drop down script--------------------------->
     <script>
@@ -669,9 +644,9 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>

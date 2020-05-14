@@ -307,6 +307,15 @@ font-size: 14px;
   background-color:#7f9f9e;
   border-color:none;
 }
+.box-style{
+  border: 2px solid #004040;
+  background-color: transparent;
+}
+.box-style:hover{
+  border: 2px solid #004040;
+  background-color: #008287;
+  color: white;
+}
 /* =====================================product page============================================= */
 .default {
   background-color:#004040;
