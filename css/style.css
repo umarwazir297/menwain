@@ -449,6 +449,21 @@ font-size: 14px;
   border-radius: 25px;
   font-size: 14px;
  }
+ .btn-sort{
+  background-color: #004040;
+  color: white;
+  padding: 4px 30px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.btn-sort:hover{
+  background-color: white;
+  color: #004040;
+  padding: 4px 30px;
+  border-radius: 25px;
+  font-size: 14px;
+ }
  .store-div{
   font-size: 14px;
    border-radius: 35px !important; 
