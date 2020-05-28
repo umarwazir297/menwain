@@ -295,30 +295,47 @@ font-size: 16px;
   border-radius: 25px;
   font-size: 14px;
   }
-  .btn-cancel:hover{
-    background-color: #004040;
-    color: white;
-    padding: 4px 26px;
-    border: 2px solid #004040;
-    border-radius: 25px;
-    font-size: 14px;
-    }
-    .mini-text{
-      font-size: 0.7em;
-    }
-  .btn-reorder{
-    background-color: #004040;
-    color: white;
+.btn-cancel:hover{
+  background-color: #004040;
+  color: white;
+  padding: 4px 26px;
+  border: 2px solid #004040;
+  border-radius: 25px;
+  font-size: 14px;
+  }
+  .mini-text{
+    font-size: 0.7em;
+  }
+.btn-reorder{
+  background-color: #004040;
+  color: white;
+  padding: 3px 20px;
+  border: 2px solid #004040;
+  border-radius: 10px;
+  font-size: 14px;
+  }
+  .btn-reorder:hover{
+    background-color: transparent;
+    color: #004040;
     padding: 3px 20px;
     border: 2px solid #004040;
     border-radius: 10px;
     font-size: 14px;
     }
-    .btn-reorder:hover{
-      background-color: transparent;
-      color: #004040;
-      padding: 3px 20px;
-      border: 2px solid #004040;
-      border-radius: 10px;
-      font-size: 14px;
-      }
+  .default {
+    background-color:#0f7c7c;
+    border-radius: 0px;
+    color: white;
+    border-color: #0f7c7c;
+    border-width:1px;
+    padding: 6px 46px;
+    font-size: 0.8em;
+    font-weight: 550;
+  }
+  .default:hover{
+    color:#ffffff;
+    background-color:#004040;
+    border-color:none;
+    border-color: #004040;
+
+  }
