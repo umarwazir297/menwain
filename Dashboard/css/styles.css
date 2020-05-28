@@ -1,0 +1,324 @@
+body{
+	margin:0;
+	padding: 0;
+	background-image: url('../images/bg10.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+h6{
+    font-size: 0.8em;
+  }
+  .left-center{
+    text-align: left;
+}
+.top-search-bar[type=text] {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  background-image: url('../images/search.png');
+  background-position: 13px 9px;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  padding: 7px 10px 10px 53px;
+  background-color: #7f9f9e;
+  outline: none;
+  color: white;
+  
+}
+#searchbar::placeholder
+{
+  color: white !important;
+} 
+.color-main{
+    color: #004040;
+  }
+.bg-nav{
+      background-color: #004040;
+  }
+  .nav-link{
+      color: white !important;
+      font-size: 0.8em;
+  }
+  .bg-dash{
+      background-color: #efefef;
+  }
+  .bg-link{
+    background-color: #efefef;
+    color: #004040;
+    font-size: 1em;
+  }
+  .bg-link:hover{
+    background-color: #004040;
+    color: white;
+  }
+  .bg-active{
+    background-color: #004040;
+    color: white;
+  }
+  .head-size{
+      font-size: 1em;
+  }
+  .menu-style{
+      border-bottom: 2px solid #004040;
+  }
+  .inputData {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #c9d3d3;
+    width: 100%;
+    border: 2px solid #004040;
+    border-radius: 25px;
+    margin: 0 0 15px;
+    padding: 7px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .inputData::placeholder
+{
+  color: #004040 !important;
+} 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;       /* Remove default arrow */
+  background-image: url('../images/back\ copy.png'); 
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  padding: 7px;
+  margin: 0 0 15px;
+  padding-right: 1.5em;
+  font-size: 15px !important;
+}
+.select-style{
+border-radius: 25px; 
+background-color: #c9d3d3;
+border: 2px solid #004040;
+}
+.btn-checkout{
+  background-color: #004040;
+  color: white;
+  padding: 4px 30px;
+  border: 2px solid #004040;
+  border-radius: 25px;
+  font-size: 14px;
+  }
+  .btn-checkout:hover{
+    background-color: transparent;
+    color: #004040;
+    padding: 4px 30px;
+    border: 2px solid #004040;
+    border-radius: 25px;
+    font-size: 14px;
+    }
+  .bg-main{
+  background-color: #004040;
+}
+.card-text{
+  font-size: 0.9em;
+}
+.right-left{
+  text-align: right;
+}
+.manf-text{
+  font-size: 0.8em;
+}
+.text-payment{
+  color: #747474;
+}
+.default3 {
+  background-color: #004040;
+  color: white;
+  border-color: #004040;
+  border-width:1px; 
+  padding: 6px 20px;
+  border-radius: 32px;
+  font-weight: 470;
+  font-size: 0.9em;
+}
+.default3:hover{
+  color:#004040;
+  background-color:white;
+  border-color:none;
+}
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none !important
+  ;
+}
+.border-green{
+  border: 1px solid #004040;
+}
+@media(max-width:780px){
+    .left-center{
+        text-align: center;
+    }
+    .right-left{
+      text-align: left;
+    }
+}
+/* =======================custom radio=========================== */
+.radio {
+ 
+  display: block;
+ position: relative;
+ padding-left: 30px;
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 20px;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ font-weight: 500;
+}
+
+.radio-text{
+font-size: 16px;
+}
+/* Hide the browser's default radio button */
+.radio input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkround {
+
+ position: absolute;
+ top: 6px;
+ left: 0;
+ height: 17px;
+ width: 17px;
+ background-color: #fff ;
+ border-color:#004040;
+ border-style:solid;
+ border-width:2px;
+  border-radius: 50%;
+}
+
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkround {
+ background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkround:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkround:after {
+ display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkround:after {
+  left: 2px;
+ top: 2px;
+ width: 9px;
+ height: 9px;
+ border-radius: 50%;
+ background:#004040;
+}
+/* =======================================radio end========================================= */
+/* ======================================custom check box=================================== */
+
+.checkbox {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 13px; line-height:18px;
+ }
+ 
+ input[type=checkbox] {
+  display:none;   
+ }
+ 
+ .checkbox:before {
+  content: "";
+  display: inline-block;
+  width: 21px;
+  height: 19px;
+  vertical-align: middle;
+  background-color: white;
+  color: #f3f3f3;
+  background: url('../images/unselected.png');
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: contain; 
+ }
+ 
+ input[type=checkbox]:checked + .checkbox:before {
+  background: url('../images/selected.png');
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+ 
+ }
+ /* ===============================check box end================== */
+.input-box[type=text] {
+  border: 1px solid #004040;
+  border-radius: 50px;
+  font-size: 14px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 0px 0px 4px 19px;
+  background-color: #dce1e1;
+  color: #004040;
+
+}
+.input-box:focus,.input-box:active {
+  outline: none !important;
+  box-shadow: none !important
+  ;
+}
+.select-style-2{
+  border-radius: 25px; 
+  background-color: #dce1e1;
+  border: 1px solid #004040;
+  }
+.btn-cancel{
+  background-color: transparent;
+  color: #004040;
+  padding: 4px 26px;
+  border: 2px solid #004040;
+  border-radius: 25px;
+  font-size: 14px;
+  }
+  .btn-cancel:hover{
+    background-color: #004040;
+    color: white;
+    padding: 4px 26px;
+    border: 2px solid #004040;
+    border-radius: 25px;
+    font-size: 14px;
+    }
+    .mini-text{
+      font-size: 0.7em;
+    }
+  .btn-reorder{
+    background-color: #004040;
+    color: white;
+    padding: 3px 20px;
+    border: 2px solid #004040;
+    border-radius: 10px;
+    font-size: 14px;
+    }
+    .btn-reorder:hover{
+      background-color: transparent;
+      color: #004040;
+      padding: 3px 20px;
+      border: 2px solid #004040;
+      border-radius: 10px;
+      font-size: 14px;
+      }

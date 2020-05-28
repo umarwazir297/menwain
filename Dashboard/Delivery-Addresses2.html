@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Delivery Addresses 2</title>
+</head>
+
+<body>
+    <!--============================================Header========================================== -->
+    <section>
+        <div class="container">
+            <div class="row pt-5 pb-5">
+                <div class="col-md-2">
+                    <div class="left-center">
+                        <a href="#" class="text-decoration-none"><img src="images/logo.png" class="img-fluid"
+                                width="50"> </a>
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1 mt-4 mt-md-0">
+                    <form>
+                        <input id="searchbar" class="top-search-bar mt-2" type="text" name="search"
+                            placeholder="I am shopping for...">
+                    </form>
+                </div>
+                <div class="col-md-1 offset-md-2 mt-5 mt-md-0">
+                    <div class="text-center">
+                        <img src="images/cart.png" class="img-fluid" width="32">
+                        <h6 class="mt-2 ml-1 color-main">Cart</h6>
+                    </div>
+                </div>
+                <div class="col-md-1 mt-3 mt-md-0">
+                    <div class="text-center">
+                        <img src="images/profile.png" class="img-fluid" width="32">
+                        <h6 class="mt-1 ml-1 color-main">Hi John</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------------------------navbar---------------------------------------------------->
+    <section>
+      <nav class="navbar navbar-expand-sm bg-nav p-md-1">
+          <div class="container">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+                  <i class="fa fa-bars fa-lg py-1 text-white"></i>
+              </button>
+
+              <div class="navbar-collapse collapse" id="navbarCustom">
+
+                  <ul class="navbar-nav ">
+                      <li class="nav-item ">
+                          <a class="nav-link ml-3 ml-md-0" href="my-order.html">My Order </a>
+                      </li>
+                      <li class="nav-item "></li>
+                      <a class="nav-link ml-3" href="my list.html">My Lists</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link ml-3" href="Delivery-Addresses.html">Delivery Address</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link ml-3" href="payment.html">Payment Methods</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link ml-3" href="settings.html">Settings</a>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+
+      </nav>
+  </section>
+    <!-- ===============================================main=========================================== -->
+    <section class="mt-5 mb-5">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-3 ">
+                    <div class="container bg-dash ">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="color-main head-size font-weight-bold text-center mt-2 p-2">Dashboard</h5>
+                            </div>
+                        </div>
+                        <a href="my-order.html" class="text-decoration-none">
+                            <div class="row p-2 bg-link menu-style">
+                                <div class="col-12 ">
+                                    <h6 class=" pt-1">My Orders</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="my list.html" class="text-decoration-none">
+                            <div class="row p-2 bg-link menu-style">
+                                <div class="col-12 ">
+                                    <h6 class=" pt-1">My Lists</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Delivery-Addresses.html" class="text-decoration-none">
+                            <div class="row p-2 bg-active menu-style">
+                                <div class="col-12 ">
+                                    <h6 class=" pt-1">Delivery Addresses</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="payment.html" class="text-decoration-none">
+                            <div class="row p-2 bg-link menu-style">
+                                <div class="col-12 ">
+                                    <h6 class=" pt-1">Payment Methods</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="settings.html" class="text-decoration-none">
+                            <div class="row p-2 bg-link menu-style">
+                                <div class="col-12 ">
+                                    <h6 class=" pt-1">Settings</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-9 mt-5 mt-md-0">
+                    <div class="container bg-dash">
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <h6 class="head-size font-weight-bold color-main text-center mt-2">Delivery Addresses</h6>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-5">
+                          <div class="col-md-10">
+                            <form>
+                              <label class="radio color-main radio-text" >Adding new address manually 
+                                <input type="radio" onchange="changebtn('upper')"  checked="checked" name="is_company" id="upper">
+                                <span class="checkround"></span>
+                              </label>
+                              <label class="radio color-main radio-text">Adding new address from google map
+                                <input type="radio" onchange="changebtn('lower')"  name="is_company" id="lower">
+                                <span class="checkround"></span>
+                              </label>
+                          </form>
+                          <div id="form" style="display: block;">
+                            <div class="row">
+                              <div class="col-md-12 mt-1">
+                                <form>
+                                  <div class="row mt-5 mb-3">
+                                    <div class="col-md-4">
+                                      <h6 class="color-main">Contact Name</h6>
+                                      <input type="text" name="ContactName" class="form-control input-box">
+                                    </div>
+                                    <div class="col-md-4">
+                                      <h6 class="color-main">Contact No</h6>
+                                      <input type="text" name="ContactName" class="form-control input-box">
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-8">
+                                      <h6 class="color-main">Country Region</h6>
+                                      <select type="text" name="country" class="form-control select-style-2">
+                                        <option>pakistan</option>
+                                        <option>pakistan</option>
+                                        <option>pakistan</option>
+                                        <option>pakistan</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-8">
+                                      <h6 class="color-main">Street Address</h6>
+                                      <input type="text" name="st-address" class="form-control input-box">
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-8">
+                                      <input type="text" name="" class="form-control input-box">
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-8">
+                                      <h6 class="color-main">State/Province/Region</h6>
+                                      <select type="text" name="country" class="form-control select-style-2">
+                                        <option>pakistan</option>
+                                        <option>pakistan</option>
+                                        <option>pakistan</option>
+                                        <option>pakistan</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-8">
+                                      <h6 class="color-main">City/Department</h6>
+                                      <input type="text" name="city" class="form-control input-box">
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-8">
+                                      <h6 class="color-main manually-address-labels">Zip Code</h6>
+                                      <input type="text" name="zip" class="form-control input-box">
+                                      <div class=" mt-4">
+                                        <input id="Option" type="checkbox">
+                                        <label class="checkbox  color-main" for="Option" style="font-size: 14px; font-weight: 500;"> My address does not have a Zip Code</label>
+                                      </div>
+                                      <div class="mt-2">
+                                        <input id="Option-2" type="checkbox">
+                                        <label class="checkbox color-main" for="Option-2" style="font-size: 14px; font-weight: 500;"> Set as Default</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                                <div class=" mt-4 mb-5">
+                                  <button class="btn btn-checkout ">Save</button>
+                                  <button class="btn btn-cancel ml-3 ">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="map" style="display: none;">
+                            <div class="col-md-12 " style="padding:2.1rem;">
+                              <form>
+                                
+                                <br>
+                                <div id="googleMap" class="map-design" style="width:100%;height:450px; border:1px solid;">
+                                </div>
+                                <script>
+                              function myMap() {
+                              var mapProp= {
+                              center:new google.maps.LatLng(51.508742,-0.120850),
+                              zoom:5,
+                              };
+                              var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                              }
+                                </script>
+                                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script><br><br>
+                                  
+                                </form>
+                                <div class="address-btns mt-5 mb-5">
+                                  <button class="btn btn-checkout">Save</button>
+                                  <button class="btn btn-cancel ml-4">Cancel</button>
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===========================================Footer============================================ -->
+    <footer class="mt-5 bg-main">
+        <div class="container">
+          <div class="row pt-5 pb-3 ">
+            <div class="col-md-2">
+              <div class="row">
+                <div class="col-12">
+                  <h5 class="text-white card-text">About Us</h5>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Terms of use</h6>
+                  </a>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Privacy Policy</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mt-4 mt-md-0">
+              <div class="row">
+                <div class="col-12">
+                  <h5 class="text-white card-text">Customer Services</h5>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Contact Us</h6>
+                  </a>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Warranty Policy</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mt-4 mt-md-0">
+              <div class="row">
+                <div class="col-12">
+                  <h5 class="text-white card-text">Social</h5>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Facebook</h6>
+                  </a>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Instagram</h6>
+                  </a>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-12">
+                  <a href="#" class="text-decoration-none">
+                    <h6 class="text-white font-weight-normal">Twitter</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+              <div class="right-left">
+                <a href="#" class="text-decoration-none"> <img src="images/Zcc copy.png" class="img-fluid" width="60"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr style="border-bottom: 2px solid white;">
+        <div class="container pb-3 pt-2">
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-white font-weight-normal">All rights reserved @oranjeclick.com</h6>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="right-left">
+                <span class="text-white manf-text">Payment methods</span>
+                <img src="images/visa.png" class="img-fluid ml-3">
+                <img src="images/mastercard.png" class="img-fluid ml-3">
+                <img src="images/paypal.png" class="img-fluid ml-3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script>
+        function changebtn(data){
+          if(data === 'upper'){
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('map').style.display = 'none';
+          }
+          else{
+            document.getElementById('form').style.display = 'none';
+            document.getElementById('map').style.display = 'block';
+          }
+        }
+      </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

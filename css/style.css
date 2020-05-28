@@ -285,7 +285,13 @@ font-size: 14px;
     padding: .5em;
     padding-right: 1.5em;
     font-size: 15px !important;
+    text-align: center;
+  text-align-last: center;
  }
+ 
+option {
+  text-align: left;
+}
  .select-style{
   border-radius: 25px; 
   background-color: #fcfcfc;
