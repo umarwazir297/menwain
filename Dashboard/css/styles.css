@@ -334,7 +334,7 @@ font-size: 16px;
   }
   .default:hover{
     color:#ffffff;
-    background-color:#004040;
+    background-color:#004040 !important;
     border-color:none;
     border-color: #004040;
 

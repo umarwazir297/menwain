@@ -137,13 +137,12 @@
             <div class="row">
               <div class="col-12">
                 <div class="text-center">
-                <button class="btn default mt-3">All Orders</button>
-                <button class="btn default ml-2  mt-3">Pending</button>
-                <button class="btn default ml-2  mt-3">Confirmed</button>
-                <button class="btn default ml-2  mt-3">Delivered</button>
-                <button class="btn default ml-2  mt-3">Cancel</button>
+                <button class="btn default mt-3"       id="color1" onclick="hideElementAll()" style="background-color: #004040;">All Orders</button>
+                <button class="btn default ml-2  mt-3" id="color2" onclick="hideElementPending()">Pending</button>
+                <button class="btn default ml-2  mt-3" id="color3" onclick="hideElementConfirm()">Confirmed</button>
+                <button class="btn default ml-2  mt-3" id="color4" onclick="hideElementDeliver()">Delivered</button>
+                <button class="btn default ml-2  mt-3" id="color5" onclick="hideElementCancel()">Cancel</button>
               </div>
-
               </div>
             </div>
             <table class="table table-condensed table-responsive-lg cursor-pointer mt-3" id="myTable">
@@ -159,7 +158,7 @@
                   <th class="manf-text">Delivery Date</th>
                 </tr>
               </thead>
-              <tbody class="panel ">
+              <tbody class="panel " id="all" style="display: contents">
                 <tr class="pointer" onclick="colorchange(1)" id="colorcheck1" data-toggle="collapse"
                   data-target="#demo1" data-parent="#myTable">
                   <td>
@@ -290,7 +289,7 @@
                   <td>
                     <div class="text-center"><img id="IMG2" src="images/-e-back.png" width="10"></div>
                   </td>
-                  <td class="manf-text">In Progress</td>
+                  <td class="manf-text">Delivered</td>
                   <td class="manf-text">51348</td>
                   <td class="manf-text">$550</td>
                   <td class="manf-text">Al-mohammadia plaza,</td>
@@ -415,7 +414,1515 @@
                   <td>
                     <div class="text-center"><img id="IMG3" src="images/-e-back.png" width="10"></div>
                   </td>
-                  <td class="manf-text">In Progress</td>
+                  <td class="manf-text">Cancel</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo3" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="panel " id="pen" style="display: none;">
+                <tr class="pointer" onclick="colorchangeOne(1)" id="colorscheck1" data-toggle="collapse"
+                  data-target="#demo1" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="IMGS1" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Pending</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo1" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeOne(2)" data-toggle="collapse" data-target="#demo2"
+                  data-parent="#myTable" id="colorscheck2">
+                  <td>
+                    <div class="text-center"><img id="IMGS2" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Pending</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo2" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeOne(3)" id="colorscheck3" data-toggle="collapse"
+                  data-target="#demo3" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="IMGS3" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Pending</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo3" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="panel " id="con" style="display: none;">
+                <tr class="pointer" onclick="colorchangeTwo(1)" id="1colorcheck1" data-toggle="collapse"
+                  data-target="#demo1" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="1IMG1" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Confirmed</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo1" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeTwo(2)" data-toggle="collapse" data-target="#demo2"
+                  data-parent="#myTable" id="1colorcheck2">
+                  <td>
+                    <div class="text-center"><img id="1IMG2" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Confirmed</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo2" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeTwo(3)" id="1colorcheck3" data-toggle="collapse"
+                  data-target="#demo3" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="1IMG3" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Confirmed</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo3" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="panel " id="del" style="display: none;">
+                <tr class="pointer" onclick="colorchangeThree(1)" id="2colorcheck1" data-toggle="collapse"
+                  data-target="#demo1" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="2IMG1" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Delivered</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo1" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeThree(2)" data-toggle="collapse" data-target="#demo2"
+                  data-parent="#myTable" id="2colorcheck2">
+                  <td>
+                    <div class="text-center"><img id="2IMG2" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Delivered</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo2" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeThree(3)" id="2colorcheck3" data-toggle="collapse"
+                  data-target="#demo3" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="2IMG3" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Delivered</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo3" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="panel " id="can" style="display: none;">
+                <tr class="pointer" onclick="colorchangeFour(1)" id="3colorcheck1" data-toggle="collapse"
+                  data-target="#demo1" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="3IMG1" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Cancelled</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo1" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeFour(2)" data-toggle="collapse" data-target="#demo2"
+                  data-parent="#myTable" id="3colorcheck2">
+                  <td>
+                    <div class="text-center"><img id="3IMG2" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Cancelled</td>
+                  <td class="manf-text">51348</td>
+                  <td class="manf-text">$550</td>
+                  <td class="manf-text">Al-mohammadia plaza,</td>
+                  <td class="manf-text">20 Oct 2019</td>
+                  <td class="manf-text">Store name</td>
+                  <td class="manf-text"> 22 Oct 2019</td>
+                </tr>
+                <tr id="demo2" class="collapse " style="border:1px solid #004040;">
+                  <td colspan="9" class="hiddenRow">
+                    <div class="row scroll-f justify-content-center ">
+                      <div class="col-3">
+                        <div class="card" style="width: 100%; border-style: none; border-radius: 10px;">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <img src="images/Group 15.png" class="img-fluid">
+                              <h6 class="color-main mt-2">Meat One</h6>
+                              <div class="star-ratings text-center color-main manf-text">
+                                <span class="far fa-star "></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="far fa-star checked"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <p class="card-text color-main">(4.0)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" color-main mt-3 ml-3">
+                          <h6>Total Products<span class="float-right">$15</span></h6>
+                          <h6>Delivery Charge<span class="float-right">$15</span></h6>
+                          <h6 style="border-bottom: 1px solid;" class="pb-2">Product Cost<span
+                              class="float-right">$15</span></h6>
+                          <h6>Total Cost<span class="float-right">$45</span></h6>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-reorder mt-4">Reorder</button>
+                        </div>
+                      </div>
+                      <div class="col-9 ">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                        <div class="row ">
+                          <div class="col-2 m-auto">
+                            <img class="img-shadow" src="images/order dropdown.png">
+                          </div>
+                          <div class="col-8">
+                            <div class="p color-main mt-2">
+                              <h6>1x boneless mutton 11 kg</h6>
+                              <h6 class="mini-text">By: MealOne</h6>
+                              <h6 class="font-weight-bold">$50</h6>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                            <div class=" text-center mt-3 color-main">
+                              <span class="fas fa-star"></span>
+                              <p>(4.0)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr style="border:1px solid #004040;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pointer" onclick="colorchangeFour(3)" id="3colorcheck3" data-toggle="collapse"
+                  data-target="#demo3" data-parent="#myTable">
+                  <td>
+                    <div class="text-center"><img id="3IMG3" src="images/-e-back.png" width="10"></div>
+                  </td>
+                  <td class="manf-text">Cancelled</td>
                   <td class="manf-text">51348</td>
                   <td class="manf-text">$550</td>
                   <td class="manf-text">Al-mohammadia plaza,</td>
@@ -547,6 +2054,7 @@
     </div>
   </section>
   <!-- ==========================jquery================================= -->
+  <!-- all order script -->
   <script type="text/javascript">
     function colorchange(clicked_id) {
       var x = document.getElementById('colorcheck' + clicked_id);
@@ -564,6 +2072,149 @@
         document.getElementById("IMG" + clicked_id).style.width = "15px";
         document.getElementById('borderline').style.border = "2px solid rgb(0, 64, 64)";
       }
+    }
+  </script>
+  <!-- pending script -->
+  <script type="text/javascript">
+    function colorchangeOne(clicked_id) {
+      var x = document.getElementById('colorscheck' + clicked_id);
+      if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+        x.style.backgroundColor = 'rgb(239, 239, 239)';
+        document.getElementById('colorscheck' + clicked_id).style.color = 'black';
+        document.getElementById("IMGS" + clicked_id).src = "images/-e-back.png";
+        document.getElementById("IMGS" + clicked_id).style.width = "10px";
+      } else {
+        x.style.backgroundColor = 'rgb(0, 64, 64)';
+        if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+          document.getElementById('colorscheck' + clicked_id).style.color = 'white';
+        }
+        document.getElementById("IMGS" + clicked_id).src = "images/e-backwhite.png";
+        document.getElementById("IMGS" + clicked_id).style.width = "15px";
+        document.getElementById('borderline').style.border = "2px solid rgb(0, 64, 64)";
+      }
+    }
+  </script>
+  <!-- confirmed script -->
+   <script type="text/javascript">
+    function colorchangeTwo(clicked_id) {
+      var x = document.getElementById('1colorcheck' + clicked_id);
+      if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+        x.style.backgroundColor = 'rgb(239, 239, 239)';
+        document.getElementById('1colorcheck' + clicked_id).style.color = 'black';
+        document.getElementById("1IMG" + clicked_id).src = "images/-e-back.png";
+        document.getElementById("1IMG" + clicked_id).style.width = "10px";
+      } else {
+        x.style.backgroundColor = 'rgb(0, 64, 64)';
+        if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+          document.getElementById('1colorcheck' + clicked_id).style.color = 'white';
+        }
+        document.getElementById("1IMG" + clicked_id).src = "images/e-backwhite.png";
+        document.getElementById("1IMG" + clicked_id).style.width = "15px";
+        document.getElementById('borderline').style.border = "2px solid rgb(0, 64, 64)";
+      }
+    }
+  </script>
+  <!-- delivered script -->
+  <script type="text/javascript">
+    function colorchangeThree(clicked_id) {
+      var x = document.getElementById('2colorcheck' + clicked_id);
+      if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+        x.style.backgroundColor = 'rgb(239, 239, 239)';
+        document.getElementById('2colorcheck' + clicked_id).style.color = 'black';
+        document.getElementById("2IMG" + clicked_id).src = "images/-e-back.png";
+        document.getElementById("2IMG" + clicked_id).style.width = "10px";
+      } else {
+        x.style.backgroundColor = 'rgb(0, 64, 64)';
+        if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+          document.getElementById('2colorcheck' + clicked_id).style.color = 'white';
+        }
+        document.getElementById("2IMG" + clicked_id).src = "images/e-backwhite.png";
+        document.getElementById("2IMG" + clicked_id).style.width = "15px";
+        document.getElementById('borderline').style.border = "2px solid rgb(0, 64, 64)";
+      }
+    }
+  </script>
+  <!-- cancel script -->
+  <script type="text/javascript">
+    function colorchangeFour(clicked_id) {
+      var x = document.getElementById('3colorcheck' + clicked_id);
+      if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+        x.style.backgroundColor = 'rgb(239, 239, 239)';
+        document.getElementById('3colorcheck' + clicked_id).style.color = 'black';
+        document.getElementById("3IMG" + clicked_id).src = "images/-e-back.png";
+        document.getElementById("3IMG" + clicked_id).style.width = "10px";
+      } else {
+        x.style.backgroundColor = 'rgb(0, 64, 64)';
+        if (x.style.backgroundColor === 'rgb(0, 64, 64)') {
+          document.getElementById('3colorcheck' + clicked_id).style.color = 'white';
+        }
+        document.getElementById("3IMG" + clicked_id).src = "images/e-backwhite.png";
+        document.getElementById("3IMG" + clicked_id).style.width = "15px";
+        document.getElementById('borderline').style.border = "2px solid rgb(0, 64, 64)";
+      }
+    }
+  </script>
+  <!-- ==========================hide and show of div============================ -->
+  <script>
+    function hideElementAll() {
+      document.getElementById('all').style.display = 'contents';
+      document.getElementById('pen').style.display = 'none';
+      document.getElementById('con').style.display = 'none';
+      document.getElementById('del').style.display = 'none';
+      document.getElementById('can').style.display = 'none';
+      document.getElementById("color1").style.backgroundColor = '#004040';
+      document.getElementById("color2").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color3").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color4").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color5").style.backgroundColor = '#0f7c7c';
+    }
+    function hideElementPending() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('pen').style.display = 'contents';
+      document.getElementById('con').style.display = 'none';
+      document.getElementById('del').style.display = 'none';
+      document.getElementById('can').style.display = 'none';
+      document.getElementById("color1").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color2").style.backgroundColor = '#004040';
+      document.getElementById("color3").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color4").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color5").style.backgroundColor = '#0f7c7c';
+    }
+    function hideElementConfirm() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('pen').style.display = 'none';
+      document.getElementById('con').style.display = 'contents';
+      document.getElementById('del').style.display = 'none';
+      document.getElementById('can').style.display = 'none';
+      document.getElementById("color1").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color2").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color3").style.backgroundColor = '#004040';
+      document.getElementById("color4").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color5").style.backgroundColor = '#0f7c7c';
+    }
+    function hideElementDeliver() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('pen').style.display = 'none';
+      document.getElementById('con').style.display = 'none';
+      document.getElementById('del').style.display = 'contents';
+      document.getElementById('can').style.display = 'none';
+      document.getElementById("color1").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color2").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color3").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color4").style.backgroundColor = '#004040';
+      document.getElementById("color5").style.backgroundColor = '#0f7c7c';
+    }
+    function hideElementCancel() {
+      document.getElementById('all').style.display = 'none';
+      document.getElementById('pen').style.display = 'none';
+      document.getElementById('con').style.display = 'none';
+      document.getElementById('del').style.display = 'none';
+      document.getElementById('can').style.display = 'contents';
+      document.getElementById("color1").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color2").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color3").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color4").style.backgroundColor = '#0f7c7c';
+      document.getElementById("color5").style.backgroundColor = '#004040';
     }
   </script>
   <!-- ===========================================Footer============================================ -->
