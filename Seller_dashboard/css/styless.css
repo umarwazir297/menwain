@@ -1,0 +1,141 @@
+.bg-main{
+    background-color: #004040;
+}
+.color-main{
+    color: #004040;
+}
+h6{
+    font-size: 0.8em;
+}
+.mini-font{
+    font-size: 1em;
+    font-weight: 300;
+}
+.active{
+    font-size: 1em;
+    font-weight: 500;
+}
+.color-2{
+    color: #e4e4e4;
+}
+.search-icon{
+    color: #a1a1a1;
+}
+.bg-search{
+    background-color: #f8f6f6 !important;
+}
+.form-control:focus,.form-control:active {
+    outline: none !important;
+    box-shadow: none !important
+    ;
+  }
+  .text-profile{
+      color: #b0afaf;
+      font-size: 0.8em;
+      font-weight: 500;
+  }
+  .main-section{
+    background-image: url(../images/background\ 1.png);
+    background-repeat: no-repeat;  
+    width: 100%;
+    background-size:100% 100% !important;
+  }
+  .box-style{
+    border-bottom: 4px solid #004040;
+    border-radius: 5px;
+    font-size: 1.1em !important;
+    color: #747474;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 4px 0 rgba(0, 0, 0, 0.1); 
+
+  }
+  .color-1{
+      color: #008287;
+  }
+  .color-grey{
+      color: #8b8b8b;
+  }
+  .color-yellow{
+      color: #ffdd42;
+  }
+  .color-green{
+      color: #86c82d;
+  }
+  .color-red{
+      color: #c64246;
+  }
+  .shadow-card{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 4px 0 rgba(0, 0, 0, 0.1); 
+  }
+  .table-style{
+     border-radius: 15px !important;
+     font-size: 0.8em !important;
+  }
+  .table td, .table th {
+    border-top: none; 
+    border-radius:  15px 15px 0px 0px;
+}
+.font-order{
+    font-size: 15px;
+}
+.box-style-2{
+    border-radius: 2px;
+    font-size: 1.1em !important;
+    color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 4px 0 rgba(0, 0, 0, 0.1); 
+
+  }
+  .bg-green{
+      background-color: #86c82d;
+  }
+  .bg-yellow{
+      background-color: #ffd800;
+  }
+  .bg-blue{
+      background-color: #0299d2;
+  }
+  .custom-font{
+      font-size: 0.9em;
+  }
+  .btn-proceed{
+      color: white;
+      background-color: #008287;
+      padding: 4px 35px;
+      border-radius: 4px;
+      font-size: 0.9em;
+  }
+  /* ======================================custom check box=================================== */
+
+.checkbox {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13px; line-height:18px;
+   }
+   
+   input[type=checkbox] {
+    display:none;   
+   }
+   
+   .checkbox:before {
+    content: "";
+    display: inline-block;
+    width: 31px;
+    height: 21px;
+    vertical-align: middle;
+    background-color: white;
+    color: #f3f3f3;
+    background: url('../images/check.png');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+   }
+   
+   input[type=checkbox]:checked + .checkbox:before {
+    background: url('../images/checked.png');
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+   }
+   /* ===============================check box end================== */
+  
