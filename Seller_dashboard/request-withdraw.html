@@ -26,33 +26,70 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <a href="#" class="text-decoration-none">
-                                    <span><img src="images/dashboard active.png" width="14"> </span>
-                                    <span class="text-white ml-1 mini-font">Dashboard</span>
+                                <a href="dash.html" class="text-decoration-none">
+                                    <span><img src="images/dashboard inactive.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Dashboard</span>
                                 </a>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-12">
-                                <a href="#" class="text-decoration-none">
+                                <a href="#" class="text-decoration-none" onclick="hideElementInventory()">
                                     <span><img src="images/Inventory.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">Inventory</span>
+                                    <span class="ml-1 mini-font">Inventory</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="inventory1">
+                            <div class="col-12">
+                                <a href="stock-management.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Stock Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="inventory2">
+                            <div class="col-12">
+                                <a href="inventory-management.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Inventory Management</span>
                                 </a>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-12">
-                                <a href="#" class="text-decoration-none">
-                                    <span><img src="images/Orders active.png" width="14"> </span>
-                                    <span class="color-2 ml-1  active">Orders</span>
+                                <a href="order.html" class="text-decoration-none">
+                                    <span><img src="images/Orders.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Orders</span>
                                 </a>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-12">
-                                <a href="#" class="text-decoration-none">
+                                <a href="#" class="text-decoration-none" onclick="hideElementFinancial()">
                                     <span><img src="images/Financial.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">Financial</span>
+                                    <span class=" ml-1 mini-font">Financial</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3"  id="financial1">
+                            <div class="col-12">
+                                <a href="account-summary.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Account Summary</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" id="financial2">
+                            <div class="col-12">
+                                <a href="request-withdraw.html" class="text-decoration-none">
+                                    <span class="ml-3 active-2">Request Withdrawal</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" id="financial3">
+                            <div class="col-12">
+                                <a href="withdrawal-status.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Withdrawal Status</span>
                                 </a>
                             </div>
                         </div>
@@ -60,7 +97,8 @@
                             <div class="col-12">
                                 <a href="#" class="text-decoration-none">
                                     <span><img src="images/Promotion.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">Promotions</span>
+                                    <span class=" ml-1 mini-font">Promotions</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
                                 </a>
                             </div>
                         </div>
@@ -68,7 +106,7 @@
                             <div class="col-12">
                                 <a href="#" class="text-decoration-none">
                                     <span><img src="images/Settings.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">Settings</span>
+                                    <span class=" ml-1 mini-font">Settings</span>
                                 </a>
                             </div>
                         </div>
@@ -76,7 +114,7 @@
                             <div class="col-12">
                                 <a href="#" class="text-decoration-none">
                                     <span><img src="images/help.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">Help</span>
+                                    <span class=" ml-1 mini-font">Help</span>
                                 </a>
                             </div>
                         </div>
@@ -84,7 +122,7 @@
                             <div class="col-12">
                                 <a href="#" class="text-decoration-none">
                                     <span><img src="images/Profile icon.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">About</span>
+                                    <span class=" ml-1 mini-font">About</span>
                                 </a>
                             </div>
                         </div>
@@ -92,7 +130,7 @@
                             <div class="col-12">
                                 <a href="#" class="text-decoration-none">
                                     <span><img src="images/logout.png" width="14"> </span>
-                                    <span class="color-2 ml-1 mini-font">Logout</span>
+                                    <span class=" ml-1 mini-font">Logout</span>
                                 </a>
                             </div>
                         </div>
@@ -125,8 +163,9 @@
                     <!-- ==================banner======================== -->
                     <div class="container-fluid bg-search mt-3">
                         <div class="row">
-                            <div class="col-12 p-5">
+                            <div class="col-12 pt-4 pb-4 pl-5 pr-5">
                                 <h4 class=" text-uppercase mt-3 ">Request Withdrawal</h4>
+                                <h6 class="mini-text color-grey text-right mr-md-5 mt-4 mt-md-0">Financial >Request Withdrawal</h6>
                             </div>
                         </div>
                     </div>
@@ -183,7 +222,46 @@
         </div>
     </section>
 
+    <script>
+        function hideElementInventory() {
+            var x = document.getElementById("inventory1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("inventory2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+            
+        }
+        function hideElementFinancial() {
+            var x = document.getElementById("financial1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial3");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
 
+        }
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

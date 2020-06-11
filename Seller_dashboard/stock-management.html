@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styless.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Stock Management</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 bg-main">
+                    <div class="container fix-position">
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <img src="images/logo 2.png" class="img-fluid" width="40">
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <a href="dash.html" class="text-decoration-none">
+                                    <span><img src="images/dashboard inactive.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none" onclick="hideElementInventory()">
+                                    <span><img src="images/Inventory.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Inventory</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3"  id="inventory1">
+                            <div class="col-12">
+                                <a href="stock-management.html" class="text-decoration-none">
+                                    <span class="ml-3 active-2">Stock Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" id="inventory2">
+                            <div class="col-12">
+                                <a href="inventory-management.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Inventory Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="order.html" class="text-decoration-none">
+                                    <span><img src="images/Orders.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Orders</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none" onclick="hideElementFinancial()">
+                                    <span><img src="images/Financial.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Financial</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="financial1">
+                            <div class="col-12">
+                                <a href="account-summary.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Account Summary</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="financial2">
+                            <div class="col-12">
+                                <a href="request-withdraw.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Request Withdrawal</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="financial3">
+                            <div class="col-12">
+                                <a href="withdrawal-status.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Withdrawal Status</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Promotion.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Promotions</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Settings.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/help.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Help</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Profile icon.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">About</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-5">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/logout.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 p-0">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="row">
+                                    <div class="col-md-4 col-7">
+                                        <div class="input-group md-form form-sm form-2 pl-0 mt-5">
+                                            <input class="form-control my-0 py-1 red-border bg-search"
+                                                style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                placeholder="Search in Mainwain" aria-label="Search">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text red lighten-3 bg-search" id="basic-text1"
+                                                    style="border: none;"><i class="fas fa-search search-icon"
+                                                        aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 offset-md-6 col-5">
+                                        <div class=" mt-5 bg-search p-1">
+                                            <img src="images/profile.png" width="32">
+                                            <span class="text-profile ml-2">John Doe</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==================banner======================== -->
+                    <div class="container-fluid bg-search mt-3">
+                        <div class="row">
+                            <div class="col-12 pt-4 pb-4 pl-5 pr-5">
+                                <h4 class=" text-uppercase mt-3 ">Stock Management</h4>
+                                <h6 class="mini-text color-grey text-right mr-md-5 mt-4 mt-md-0">Inventory > Stock
+                                    Management</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======================order info======================-->
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-2 p-2 tab-style active-tab pointer" id="penn" onclick="hideElementOne()">
+                                        <div class="text-center">
+                                            <span class=" text-capetalize">All</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 p-2 tab-style pointer" id="conn" onclick="hideElementTwo()">
+                                        <div class="text-center">
+                                            <span class="text-capetalize">Live</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 p-2 tab-style pointer" id="cann" onclick="hideElementThree()">
+                                        <div class="text-center">
+                                            <span class="text-capetalize">Slod Out</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 p-2 tab-style pointer" id="shipp" onclick="hideElementFour()">
+                                        <div class="text-center">
+                                            <span class="text-capetalize">Pending</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 p-2 tab-style pointer" id="alll" onclick="hideElementFive()">
+                                        <div class="text-center">
+                                            <span class="text-capetalize">Rejected</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 p-2 tab-style pointer" id="expp" onclick="hideElementSix()">
+                                        <div class="text-center">
+                                            <span class="text-capetalize">Expired</span>
+                                        </div>
+                                    </div>
+                                    
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 bg-search  p-md-5 p-4 mb-5">
+
+                                <!-- ================all================ -->
+                                <div id="pendingorder">
+                                    <div class="row">
+                                        <div class=" col-8 col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="text-center pt-1 pb-1 bg-white" style="border-radius: 5px;">
+                                                        <img src="images/filter.png" width="14"><span class="ml-3 color-grey" style="font-size: 0.9em; font-weight: 500;">Filter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-4 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="stock-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========live================ -->
+                                <div id="confirmorder" style="display: none;">
+                                    <div class="row">
+                                        <div class=" col-8 col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="text-center pt-1 pb-1 bg-white" style="border-radius: 5px;">
+                                                        <img src="images/filter.png" width="14"><span class="ml-3 color-grey" style="font-size: 0.9em; font-weight: 500;">Filter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-4 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="stock-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========Sold tab================ -->
+                                <div id="cancellorder" style="display: none;">
+                                    <div class="row">
+                                        <div class=" col-8 col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="text-center pt-1 pb-1 bg-white" style="border-radius: 5px;">
+                                                        <img src="images/filter.png" width="14"><span class="ml-3 color-grey" style="font-size: 0.9em; font-weight: 500;">Filter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-4 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="stock-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ================PEnding================ -->
+                                <div id="shipporder" style="display: none;">
+                                    <div class="row">
+                                        <div class=" col-8 col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="text-center pt-1 pb-1 bg-white" style="border-radius: 5px;">
+                                                        <img src="images/filter.png" width="14"><span class="ml-3 color-grey" style="font-size: 0.9em; font-weight: 500;">Filter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-4 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="stock-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========Reject tab================ -->
+                                <div id="allorder" style="display: none;">
+                                    <div class="row">
+                                        <div class=" col-8 col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="text-center pt-1 pb-1 bg-white" style="border-radius: 5px;">
+                                                        <img src="images/filter.png" width="14"><span class="ml-3 color-grey" style="font-size: 0.9em; font-weight: 500;">Filter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-4 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="stock-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========Reject tab================ -->
+                                <div id="rejectorder" style="display: none;">
+                                    <div class="row">
+                                        <div class=" col-8 col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10">
+                                                    <div class="text-center pt-1 pb-1 bg-white" style="border-radius: 5px;">
+                                                        <img src="images/filter.png" width="14"><span class="ml-3 color-grey" style="font-size: 0.9em; font-weight: 500;">Filter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-4 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="stock-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2 p-2">
+                                        <div class="col-md-1 ">
+                                            <div class="text-center">
+                                                <img src="images/Group 119.png" width="60">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-8 mt-3 mt-md-0">
+                                            <div class="text-left">
+                                                <span class="text-uppercase modal-font font-weight-bold">Milk</span>
+                                                <h6 class="color-noor font-weight-normal">By Nurpur</h6>
+                                                <h6 class="text-uppercase modal-font color-noor font-weight-bold">SAR 250</h6>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-1 offset-md-7 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <img src="images/editbg.png" class="mt-3 pointer" width="40" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function hideElementOne() {
+            document.getElementById('pendingorder').style.display = 'block';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+            document.getElementById('rejectorder').style.display = 'none';
+
+        }
+        function hideElementTwo() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'block';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+            document.getElementById('rejectorder').style.display = 'none';
+        }
+        function hideElementThree() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'block';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+            document.getElementById('rejectorder').style.display = 'none';
+        }
+        function hideElementFour() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'block';
+            document.getElementById('allorder').style.display = 'none';
+            document.getElementById('rejectorder').style.display = 'none';
+        }
+        function hideElementFive() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'block';
+            document.getElementById('rejectorder').style.display = 'none';
+        }
+        function hideElementSix() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+            document.getElementById('rejectorder').style.display = 'block';
+        }
+    </script>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-main">
+                    <h6 class="modal-title ml-auto text-white modal-font" id="exampleModalLongTitle">Edit Product Detail</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1;">
+                        <img src="images/cross.png" width="20">
+                    </button>
+                </div>
+                <div class="modal-body bg-search">
+                    <div class="container">
+                        <div class="row justify-content-center mt-5">
+                         <div class="col-md-10">
+                             <div class="text-center">
+                                <div class="form-group">
+                                    <textarea class="form-control bg-white custom-font"  placeholder="Add reason for rejection" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                            <button class="btn btn-green">Update</button>
+                         </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hideElementInventory() {
+            var x = document.getElementById("inventory1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("inventory2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+            
+        }
+        function hideElementFinancial() {
+            var x = document.getElementById("financial1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial3");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#penn').click(function () {
+            $('#penn').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+            $('#expp').removeClass('active-tab')
+        })
+        $('#conn').click(function () {
+            $('#conn').addClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+            $('#expp').removeClass('active-tab')
+        })
+        $('#cann').click(function () {
+            $('#cann').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+            $('#expp').removeClass('active-tab')
+
+        })
+        $('#shipp').click(function () {
+            $('#shipp').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+            $('#expp').removeClass('active-tab')
+
+        })
+        $('#alll').click(function () {
+            $('#alll').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#expp').removeClass('active-tab')
+
+        })
+        $('#expp').click(function () {
+            $('#expp').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+
+        })
+    </script>
+
+</body>
+
+</html>

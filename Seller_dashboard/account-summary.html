@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styless.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Account Summary</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 bg-main">
+                    <div class="container fix-position">
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <img src="images/logo 2.png" class="img-fluid" width="40">
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <a href="dash.html" class="text-decoration-none">
+                                    <span><img src="images/dashboard inactive.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none" onclick="hideElementInventory()">
+                                    <span><img src="images/Inventory.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Inventory</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="inventory1">
+                            <div class="col-12">
+                                <a href="stock-management.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Stock Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="inventory2">
+                            <div class="col-12">
+                                <a href="inventory-management.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Inventory Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="order.html" class="text-decoration-none">
+                                    <span><img src="images/Orders.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Orders</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none" onclick="hideElementFinancial()">
+                                    <span><img src="images/Financial.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Financial</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3"  id="financial1">
+                            <div class="col-12">
+                                <a href="account-summary.html" class="text-decoration-none">
+                                    <span class="ml-3 active-2">Account Summary</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" id="financial2">
+                            <div class="col-12">
+                                <a href="request-withdraw.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Request Withdrawal</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" id="financial3">
+                            <div class="col-12">
+                                <a href="withdrawal-status.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Withdrawal Status</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Promotion.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Promotions</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Settings.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/help.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Help</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Profile icon.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">About</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-5">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/logout.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 p-0">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-group md-form form-sm form-2 pl-0 mt-5">
+                                            <input class="form-control my-0 py-1 red-border bg-search"
+                                                style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                placeholder="Search in Mainwain" aria-label="Search">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text red lighten-3 bg-search" id="basic-text1"
+                                                    style="border: none;"><i class="fas fa-search search-icon"
+                                                        aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 offset-md-6">
+                                        <div class=" mt-5 bg-search p-1">
+                                            <img src="images/profile.png" width="32">
+                                            <span class="text-profile ml-2">John Doe</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==================banner======================== -->
+                    <div class="container-fluid bg-search mt-3">
+                        <div class="row">
+                            <div class="col-12 pt-4 pb-4 pl-5 pr-5">
+                                <h4 class=" text-uppercase mt-3 ">Account Summary</h4>
+                                <h6 class="mini-text color-grey text-right mr-md-5 mt-4 mt-md-0">Financial > Account
+                                    Summary</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======================order info======================-->
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="row">
+                                    <div class="col-6 p-2 tab-style active-tab pointer" id="available"
+                                        onclick="hideElementAvailable()">
+                                        <div class="text-center">
+                                            <span class=" text-uppercase">Available (912.57 SAR)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-2 tab-style pointer" id="pending"
+                                        onclick="hideElementPending()">
+                                        <div class="text-center">
+                                            <span class="text-uppercase">Pending (912.57 SAR)</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 bg-search p-md-5 p-2 mb-5">
+                                <!-- ==========available tab================ -->
+                                <div id="availabel1">
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- =======================pending tab================ -->
+                                <div id="pending1" style="display: none;">
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #66665
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">15/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145432</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-8 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Colllection of
+                                                    order #54545
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Credit: 145412</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-green">Balance: 912.22 SAR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 color-grey">Debit 0.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-1">
+                                            <div class="text-center">
+                                                <button class="btn btn-view mt-2">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function hideElementAvailable() {
+            document.getElementById('availabel1').style.display = 'block';
+            document.getElementById('pending1').style.display = 'none';
+        }
+        function hideElementPending() {
+            document.getElementById('availabel1').style.display = 'none';
+            document.getElementById('pending1').style.display = 'block';
+        }
+    </script>
+    
+    <script>
+        function hideElementInventory() {
+            var x = document.getElementById("inventory1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("inventory2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+            
+        }
+        function hideElementFinancial() {
+            var x = document.getElementById("financial1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial3");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#available').click(function () {
+            $('#available').addClass('active-tab')
+            $('#pending').removeClass('active-tab')
+
+        })
+        $('#pending').click(function () {
+            $('#pending').addClass('active-tab')
+            $('#available').removeClass('active-tab')
+        })
+    </script>
+
+</body>
+
+</html>

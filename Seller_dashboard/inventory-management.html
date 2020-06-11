@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styless.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Inventory Management</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 bg-main">
+                    <div class="container fix-position">
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <img src="images/logo 2.png" class="img-fluid" width="40">
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <a href="dash.html" class="text-decoration-none">
+                                    <span><img src="images/dashboard inactive.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none" onclick="hideElementInventory()">
+                                    <span><img src="images/Inventory.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Inventory</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3"  id="inventory1">
+                            <div class="col-12">
+                                <a href="stock-management.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Stock Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" id="inventory2">
+                            <div class="col-12">
+                                <a href="inventory-management.html" class="text-decoration-none">
+                                    <span class="ml-3 active-2">Inventory Management</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="order.html" class="text-decoration-none">
+                                    <span><img src="images/Orders.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Orders</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none" onclick="hideElementFinancial()">
+                                    <span><img src="images/Financial.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Financial</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="financial1">
+                            <div class="col-12">
+                                <a href="account-summary.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Account Summary</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="financial2">
+                            <div class="col-12">
+                                <a href="request-withdraw.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Request Withdrawal</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="display: none;" id="financial3">
+                            <div class="col-12">
+                                <a href="withdrawal-status.html" class="text-decoration-none">
+                                    <span class="ml-3 mini-font-2">Withdrawal Status</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Promotion.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Promotions</span>
+                                    <span class="float-right"><img src="images/arrow down.png" width="12"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Settings.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/help.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Help</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/Profile icon.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">About</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-5">
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <span><img src="images/logout.png" width="14"> </span>
+                                    <span class=" ml-1 mini-font">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 p-0">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-group md-form form-sm form-2 pl-0 mt-5">
+                                            <input class="form-control my-0 py-1 red-border bg-search"
+                                                style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                placeholder="Search in Mainwain" aria-label="Search">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text red lighten-3 bg-search" id="basic-text1"
+                                                    style="border: none;"><i class="fas fa-search search-icon"
+                                                        aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 offset-md-6">
+                                        <div class=" mt-5 bg-search p-1">
+                                            <img src="images/profile.png" width="32">
+                                            <span class="text-profile ml-2">John Doe</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==================banner======================== -->
+                    <div class="container-fluid bg-search mt-3">
+                        <div class="row">
+                            <div class="col-12 pt-4 pb-4 pl-5 pr-5">
+                                <h4 class=" text-uppercase mt-3 ">Inventory Management</h4>
+                                <h6 class="mini-text color-grey text-right mr-md-5 mt-4 mt-md-0">Inventory > Inventory
+                                    Management</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======================Tab ======================-->
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-2 p-2 tab-style active-tab pointer" id="penn" onclick="hideElementOne()">
+                                <div class="text-center">
+                                    <span class=" text-capetalize">Pending</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-2 tab-style pointer" id="conn" onclick="hideElementTwo()">
+                                <div class="text-center">
+                                    <span class="text-capetalize">Confirmed</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-2 tab-style pointer" id="cann" onclick="hideElementThree()">
+                                <div class="text-center">
+                                    <span class="text-capetalize">Cancelled</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-2 tab-style pointer" id="shipp" onclick="hideElementFour()">
+                                <div class="text-center">
+                                    <span class="text-capetalize">Shipped/Delivered</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-2 tab-style pointer" id="alll" onclick="hideElementFive()">
+                                <div class="text-center">
+                                    <span class="text-capetalize">All Orders</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 bg-search  p-md-5 p-4 mb-5">
+
+                                <!-- ================Pending================ -->
+                                <div id="pendingorder">
+                                    <div class="row">
+                                        <div class="col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-6 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="inventory-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2 ">
+                                            <div class="text-left">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Order ID</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Price</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Quantity</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Date</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-right">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold"></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========Confirm tab================ -->
+                                <div id="confirmorder" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-6 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="inventory-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2">
+                                        <div class="col-4 ">
+                                            <div class="text-left">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Quantity</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Price</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-right">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold"></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven ml-4">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven ml-4">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven ml-4">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven ml-4">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========Cancelled tab================ -->
+                                <div id="cancellorder" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-6 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="inventory-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2">
+                                        <div class="col-4 ">
+                                            <div class="text-left">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Agent Name</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Price</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-right">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold"></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-4">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ================Shipped================ -->
+                                <div id="shipporder" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-6 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="inventory-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2 ">
+                                            <div class="text-left">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Order ID</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Price</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Agent Name</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Date</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-right">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold"></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-left">
+                                                <h6 class=" p-1 mt-2 text-inven">ek123b164</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 col-md-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">John Doe</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/2/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-right">
+                                                <button
+                                                    class="btn btn-view2 mt-2 mb-2 mb-md-0 mr-0 mr-md-3" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- ==========All order tab================ -->
+                                <div id="allorder" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-4 m-0 p-0">
+                                            <div class="input-group  pl-0 ">
+                                                <input class="form-control my-0 py-1 red-border bg-white"
+                                                    style="border: none; font-size: 0.8em; color: #b0afaf;" type="text"
+                                                    placeholder="Search in Mainwain" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text red lighten-3 bg-white"
+                                                        id="basic-text1" style="border: none;"><i
+                                                            class="fas fa-search search-icon"
+                                                            aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 offset-md-6 mt-4 mt-md-0">
+                                            <div class="text-center">
+                                                <a href="inventory-management-2.html" class="btn btn-add">Add New</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-5 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3 ">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Order ID</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Price</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Quantity</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Status</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold">Date</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="text-center">
+                                                <h6 class="text-uppercase p-1 mt-2 font-weight-bold"></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">e1234de2k14</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 color-green">Confirmed</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/3/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-center">
+                                                <button class="btn btn-view2 mt-2 mb-2 mb-md-0" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">e1234de2k14</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 color-yellow">Pending</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/3/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-center">
+                                                <button class="btn btn-view2 mt-2 mb-2 mb-md-0" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">e1234de2k14</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 color-red">Cancelled</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/3/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-center">
+                                                <button class="btn btn-view2 mt-2 mb-2 mb-md-0" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">e1234de2k14</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 color-green">Confirmed</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/3/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-center">
+                                                <button class="btn btn-view2 mt-2 mb-2 mb-md-0" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">e1234de2k14</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 color-yellow">Pending</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/3/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-center">
+                                                <button class="btn btn-view2 mt-2 mb-2 mb-md-0" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-white mt-3 shadow-card font-order-2">
+                                        <div class="col-md-2 col-3">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">e1234de2k14</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">$200</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-2">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">25</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 color-red">Cancelled</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 ">
+                                            <div class="text-center">
+                                                <h6 class=" p-1 mt-2 text-inven">12/3/2020</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <div class="text-center">
+                                                <button class="btn btn-view2 mt-2 mb-2 mb-md-0" data-toggle="modal" data-target="#exampleModalCenter">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function hideElementOne() {
+            document.getElementById('pendingorder').style.display = 'block';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+        }
+        function hideElementTwo() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'block';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+        }
+        function hideElementThree() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'block';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'none';
+        }
+        function hideElementFour() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'block';
+            document.getElementById('allorder').style.display = 'none';
+        }
+        function hideElementFive() {
+            document.getElementById('pendingorder').style.display = 'none';
+            document.getElementById('confirmorder').style.display = 'none';
+            document.getElementById('cancellorder').style.display = 'none';
+            document.getElementById('shipporder').style.display = 'none';
+            document.getElementById('allorder').style.display = 'block';
+        }
+    </script>
+    <script>
+        function hideElementInventory() {
+            var x = document.getElementById("inventory1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("inventory2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+            
+        }
+        function hideElementFinancial() {
+            var x = document.getElementById("financial1");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial2");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            var x = document.getElementById("financial3");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+            
+
+        }
+    </script>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-main">
+                    <h6 class="modal-title ml-auto text-white modal-font" id="exampleModalLongTitle">Item List (15)</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1;">
+                        <img src="images/cross.png" width="20">
+                    </button>
+                </div>
+                <div class="modal-body bg-search">
+                    <div class="container">
+                        <div class="row bg-white mt-5 shadow-card font-order-2 p-2 ml-md-3 mr-md-3 ml-0 mr-0">
+                            <div class="col-md-2 ">
+                                <div class="left-center">
+                                    <img src="images/img 1.png" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase mt-3 modal-font">Order No</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-4 modal-font">500</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase mt-3 modal-font">Time</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-4 modal-font">500</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase mt-3 modal-font">Cost</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-4 modal-font">$450</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase mt-3 modal-font">Date</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-4 modal-font">20 Mar 2020</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 ml-3">
+                            <div class="col-md-12">
+                                <h6 class="text-dark text-uppercase modal-font">Customer Detail</h6>
+                                <h6 class="text-dark ml-5 mt-4">Name: <span class="color-grey ml-1">John Doe</span></h6>
+                                <h6 class="text-dark ml-5">Phone No: <span class="color-grey ml-1">123456789</span></h6>
+                                <h6 class="text-dark ml-5">Method: <span class="color-grey ml-1">Online Payment Home delivery</span></h6>
+
+                            </div>
+                        </div>
+                        <div class="row bg-white mt-4 shadow-card font-order-2 p-2 ml-md-3 mr-md-3 ml-0 mr-0">
+                            <div class="col-md-1 ">
+                                <div class="left-center">
+                                    <img src="images/Group 119.png" width="50">
+                                </div>
+                            </div>
+                            <div class="mt-3 mt-md-0 col-md-2">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase modal-font font-weight-bold">Milk</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-3 modal-font">SAR 250</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row bg-white mt-3 shadow-card font-order-2 p-2 ml-md-3 mr-md-3 ml-0 mr-0">
+                            <div class="col-md-1 ">
+                                <div class="left-center">
+                                    <img src="images/Group 119.png" width="50">
+                                </div>
+                            </div>
+                            <div class="mt-3 mt-md-0 col-md-2">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase modal-font font-weight-bold">Milk</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-3 modal-font">SAR 250</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row bg-white mt-3 shadow-card font-order-2 p-2 ml-md-3 mr-md-3 ml-0 mr-0">
+                            <div class="col-md-1 ">
+                                <div class="left-center">
+                                    <img src="images/Group 119.png" width="50">
+                                </div>
+                            </div>
+                            <div class="mt-3 mt-md-0 col-md-2">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase modal-font font-weight-bold">Milk</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-3 modal-font">SAR 250</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row bg-white mt-3 shadow-card font-order-2 p-2 ml-md-3 mr-md-3 ml-0 mr-0">
+                            <div class="col-md-1 ">
+                                <div class="left-center">
+                                    <img src="images/Group 119.png" width="50">
+                                </div>
+                            </div>
+                            <div class="mt-3 mt-md-0 col-md-2">
+                                <div class="text-center">
+                                    <h6 class="text-uppercase modal-font font-weight-bold">Milk</h6>
+                                    <h6 class="text-uppercase font-weight-normal mt-3 modal-font">SAR 250</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <button class="btn btn-green">Accept</button>
+                                    <button class="btn btn-red ml-3">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#penn').click(function () {
+            $('#penn').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+        })
+        $('#conn').click(function () {
+            $('#conn').addClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+        })
+        $('#cann').click(function () {
+            $('#cann').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+        })
+        $('#shipp').click(function () {
+            $('#shipp').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+            $('#alll').removeClass('active-tab')
+        })
+        $('#alll').click(function () {
+            $('#alll').addClass('active-tab')
+            $('#conn').removeClass('active-tab')
+            $('#cann').removeClass('active-tab')
+            $('#shipp').removeClass('active-tab')
+            $('#penn').removeClass('active-tab')
+        })
+    </script>
+
+</body>
+
+</html>

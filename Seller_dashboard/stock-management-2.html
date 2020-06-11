@@ -10,7 +10,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styless.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <title>Dashboard</title>
+    <title>Stock Management</title>
 </head>
 
 <body>
@@ -27,8 +27,8 @@
                         <div class="row mt-5">
                             <div class="col-12">
                                 <a href="dash.html" class="text-decoration-none">
-                                    <span><img src="images/dashboard active.png" width="14"> </span>
-                                    <span class="ml-1 active">Dashboard</span>
+                                    <span><img src="images/dashboard inactive.png" width="14"> </span>
+                                    <span class="ml-1 mini-font">Dashboard</span>
                                 </a>
                             </div>
                         </div>
@@ -41,14 +41,14 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row mt-3" style="display: none;" id="inventory1">
+                        <div class="row mt-3"  id="inventory1">
                             <div class="col-12">
                                 <a href="stock-management.html" class="text-decoration-none">
-                                    <span class="ml-3 mini-font-2">Stock Management</span>
+                                    <span class="ml-3 active-2">Stock Management</span>
                                 </a>
                             </div>
                         </div>
-                        <div class="row mt-3" style="display: none;" id="inventory2">
+                        <div class="row mt-3" id="inventory2">
                             <div class="col-12">
                                 <a href="inventory-management.html" class="text-decoration-none">
                                     <span class="ml-3 mini-font-2">Inventory Management</span>
@@ -164,131 +164,145 @@
                         </div>
                     </div>
                     <!-- ==================banner======================== -->
-                    <div class="container-fluid main-section mt-3">
+                    <div class="container-fluid bg-search mt-3">
                         <div class="row">
-                            <div class="col-12 p-5">
-                                <h2 class="text-white text-uppercase mt-3 ">Dashboard</h2>
-                                <h4 class="text-white mb-3" style="font-weight: 450;">Wellcome Admin</h4>
+                            <div class="col-12 pt-4 pb-4 pl-5 pr-5">
+                                <h4 class=" text-uppercase mt-3 ">Stock Management</h4>
+                                <h6 class="mini-text color-grey text-right mr-md-5 mt-4 mt-md-0">Inventory > Stock Management</h6>
                             </div>
                         </div>
                     </div>
-                    <!-- ======================order info======================-->
-                    <div class="container mt-5">
+                    <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-md-11">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="text-center bg-white p-4 box-style">
-                                            <h6 class="text-uppercase">Total Orders</h6>
-                                            <h6 class="mt-4 text-dark">80,0000</h6>
-                                        </div>
+                            <div class="col-md-10">
+                                <h6 class="modal-font text-capitalize mt-4 color-main">Add Product</h6>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5 mt-3">
+                            <div class="col-md-10 bg-search">
+                                <!-- ========search and button============ -->
+                                <div class="row p-3">
+                                    <div class="col-md-6">
+                                       <img src="images/Group 120.png" width="60" class="img-fluid">
                                     </div>
-                                    <div class="col-md-3 mt-0 mt-4 mt-md-0">
-                                        <div class="text-center bg-white p-4 box-style">
-                                            <h6 class="text-uppercase">Pending Orders</h6>
-                                            <h6 class="mt-4 text-dark">80,0000</h6>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 mt-4 mt-md-0">
-                                        <div class="text-center bg-white p-4 box-style">
-                                            <h6 class="text-uppercase">Completed Orders</h6>
-                                            <h6 class="mt-4 text-dark">80,0000</h6>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 mt-4 mt-md-0">
-                                        <div class="text-center bg-white p-4 box-style">
-                                            <h6 class="text-uppercase">Total Earnings</h6>
-                                            <h6 class="mt-4 text-dark">80,0000</h6>
+                                    <div class="col-md-6">
+                                        <div class="right-center">
+                                            <div class="image-upload">
+                                                <label for="file-input">
+                                                    <a class="btn btn-manage text-white mt-3 mt-md-0">Upload Stock File</span></a>
+                                                </label>
+            
+                                                <input id="file-input" type="file" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--==================== table section====================== -->
-                    <div class="container mt-5 mb-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-11">
-                                <div class="row">
-                                    <div class="col-md-6">
-
-                                        <table class="table shadow-card table-style">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col" colspan="5" class="bg-light text-uppercase">latest
-                                                        order</th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col" class="text-uppercase">ID</th>
-                                                    <th scope="col" class="text-uppercase">Date</th>
-                                                    <th scope="col" class="text-uppercase">State</th>
-                                                    <th scope="col" class="text-uppercase">Total</th>
-                                                    <th scope="col"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-yellow">Pending</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-green">Success</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-red">Cancelled</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-yellow">Pending</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-green">Success</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-red">Cancelled</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="color-1">#1511</td>
-                                                    <td class="color-grey">today</td>
-                                                    <td class="color-yellow">Pending</td>
-                                                    <td class="color-grey">$999.9</td>
-                                                    <td><a href="#" class="text-decoration-none"><img
-                                                                src="images/edit.png"> </a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="text-center">
-                                            <img src="images/Vector Smart Object.png" class="img-fluid">
+                                <!-- ============small image============= -->
+                                <div class="row p-3">
+                                    <div class="col-md-12">
+                                    <img src="images/Group 119.png" class="img-fluid" width="50">
+                                </div>
+                                </div>
+                                <!-- ===========form==================== -->
+                                <div class="row p-3">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize">Product title</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search" style="border-radius: 0px; border-top: none; border-left: none; border-right: none; height: 0px;" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize">Selling Price</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search" style="border-radius: 0px; border-top: none; border-left: none; border-right: none; height: 0px;" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize">Available Quantity</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search" style="border-radius: 0px; border-top: none; border-left: none; border-right: none; height: 0px;" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-md-3 col-6 bg-main p-2">
+                                                <h6 class="text-center text-white mt-1">Description</h6>
+                                            </div>
+                                            <div class="col-md-3 col-6 active-tab p-2">
+                                                <h6 class="text-center text-white mt-1">Specification</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3 p-md-3">
+                                            <div class="col-12">
+                                                <h6 class="font-weight-bold custom-font color-main">General</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row pl-md-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize pt-1">Brand</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search input-style"  
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nescafe">
+                                            </div>
+                                        </div>
+                                        <div class="row pl-md-3 mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize pt-2" style="font-size: 0.72em;">Manufacturer Number</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search input-style" 
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="12190644">
+                                            </div>
+                                        </div>
+                                        <div class="row pl-md-3 mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize pt-1">Package Thickness</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search input-style"
+                                                  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="37centimeter">
+                                            </div>
+                                        </div>
+                                        <div class="row pl-md-3 mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize pt-1">Height</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search input-style"
+                                                  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="124 millimeter">
+                                            </div>
+                                        </div>
+                                        <div class="row pl-md-3 mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize pt-1">Width</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search input-style" 
+                                                 id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="118 millimeter">
+                                            </div>
+                                        </div>
+                                        <div class="row pl-md-3 mt-3">
+                                            <div class="col-md-2">
+                                                <h6 class="text-capitalize pt-1">Product weight</h6>
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <input type="email" class="form-control bg-search input-style" 
+                                                 id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="860 gramms">
+                                            </div>
+                                        </div>
+                                        <div class="row p-3 mt-5">
+                                            <div class="col-md-12">
+                                                <button class="btn btn-green">
+                                                    Next
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -299,8 +313,6 @@
             </div>
         </div>
     </section>
-
-
 
     <script>
         function hideElementInventory() {
@@ -353,5 +365,4 @@
         crossorigin="anonymous"></script>
 
 </body>
-
 </html>

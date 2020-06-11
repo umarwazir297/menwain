@@ -10,10 +10,32 @@ h6{
 .mini-font{
     font-size: 1em;
     font-weight: 300;
+    color: #e4e4e4;
+}
+.mini-font:hover{
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+}
+.mini-font-2{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #e4e4e4;
+}
+.mini-font-2:hover{
+    font-size: 0.9em;
+    font-weight: 400;
+    color: white;
 }
 .active{
     font-size: 1em;
     font-weight: 500;
+    color: white;
+}
+.active-2{
+    font-size: 0.9em;
+    font-weight: 500;
+    color: white;
 }
 .color-2{
     color: #e4e4e4;
@@ -77,6 +99,9 @@ h6{
 .font-order{
     font-size: 15px;
 }
+.font-order-2{
+    font-size: 14px;
+}
 .box-style-2{
     border-radius: 2px;
     font-size: 1.1em !important;
@@ -105,6 +130,104 @@ h6{
   }
   .fix-position{
       position: fixed;
+      width: 15%;
+  }
+  .mini-text{
+      font-size: 0.7em;
+  }
+  .tab-style{
+    border: 1px solid #008287;
+     border-radius:  10px 10px 0px 0px; 
+     font-size: 0.85em;
+     font-weight: 500;
+  }
+  .active-tab{
+      color: white;
+      background-color: #008287;
+  }
+  .btn-view{
+    color: white;
+    background-color: #008287;
+    padding: 2px 15px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  .btn-view2{
+    color: white;
+    background-color: #008287;
+    padding: 3px 15px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  .btn-add{
+    color: white;
+    background-color: #008287;
+    padding: 4px 15px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  .btn-green{
+    color: white;
+    background-color: #008287;
+    padding: 4px 25px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  .btn-red{
+    color: white;
+    background-color: #aa0309;
+    padding: 4px 25px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  .btn-manage{
+    color: white;
+    background-color: #008287;
+    padding: 5px 20px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  .pointer{
+      cursor: pointer;
+  }
+  .right-center{
+      text-align: right;
+  }
+  .left-center{
+    text-align: left;
+}
+.text-inven{
+    color: #383838;
+}
+.modal-font{
+    font-size: 1em;
+}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none !important
+    ;
+  }
+  .close:focus,.close:active {
+    outline: none !important;
+    box-shadow: none !important
+    ;
+  }
+  .image-upload>input {
+    display: none;
+  }
+  .input-style{
+    border-radius: 0px; 
+    border-top: none; 
+    border-left: none; 
+    border-right: none; 
+    height: 20px;
+    font-size: 0.8em;
+  }
+  .btn{
+      color: white !important;
+  }
+  .color-noor{
+      color: #606060;
   }
   /* ======================================custom check box=================================== */
 
@@ -126,23 +249,39 @@ h6{
     vertical-align: middle;
     background-color: white;
     color: #f3f3f3;
-    background: url('../images/check.png');
+    background: url('../images/unchk.png');
     text-align: center;
     background-repeat: no-repeat;
     background-size: contain; 
    }
    
    input[type=checkbox]:checked + .checkbox:before {
-    background: url('../images/checked.png');
+    background: url('../images/tick.png');
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
     font-size: 15px;
     background-size: contain;
     background-repeat: no-repeat;
    
    }
+   
    /* ===============================check box end================== */
   @media(max-width:780px){
     .fix-position{
         position: relative;
+        width: 100%;
+    }
+    .btn-view{
+        color: white;
+        background-color: #008287;
+        padding: 2px 7px;
+        border-radius: 4px;
+        font-size: 0.8em;
+      }
+      .right-center{
+        text-align: center;
+    }
+    .left-center{
+        text-align: center;
     }
   }
+  
